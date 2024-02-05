@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "T": {
+      "item": "titanium:titanium_ingot"
+    }
+  },
+  "pattern": [
+    "TT",
+    "TS",
+    " S"
+  ],
+  "result": {
+    "item": "titanium:titanium_axe"
+  }
+}

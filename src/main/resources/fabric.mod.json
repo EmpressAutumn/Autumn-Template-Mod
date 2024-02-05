@@ -1,41 +1,42 @@
 {
 	"schemaVersion": 1,
-	"id": "modid",
+	"id": "titanium",
 	"version": "${version}",
-	"name": "Example mod",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "Titanium",
+	"description": "It adds titanium to the game. That's about it.",
 	"authors": [
-		"Me!"
+		"ipopkat",
+		"Atom596"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/EmpressAutumn/Titanium"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/modid/icon.png",
+	"icon": "assets/titanium/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.example.ExampleMod"
+			"com.atom596.titanium.Titanium"
 		],
 		"client": [
-			"com.example.ExampleModClient"
+			"com.atom596.titanium.TitaniumClient"
+		],
+		"fabric-datagen": [
+			"com.atom596.titanium.TitaniumDataGenerator"
 		]
 	},
 	"mixins": [
-		"modid.mixins.json",
+		"titanium.mixins.json",
 		{
-			"config": "modid.client.mixins.json",
+			"config": "titanium.client.mixins.json",
 			"environment": "client"
 		}
 	],
 	"depends": {
-		"fabricloader": ">=0.15.0",
+		"fabricloader": ">=0.15.6",
 		"minecraft": "~1.20.4",
 		"java": ">=17",
 		"fabric-api": "*"
-	},
-	"suggests": {
-		"another-mod": "*"
 	}
 }

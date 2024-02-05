@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "T": {
+      "item": "titanium:titanium_ingot"
+    }
+  },
+  "pattern": [
+    "TTT",
+    "T T"
+  ],
+  "result": {
+    "item": "titanium:titanium_helmet"
+  }
+}
