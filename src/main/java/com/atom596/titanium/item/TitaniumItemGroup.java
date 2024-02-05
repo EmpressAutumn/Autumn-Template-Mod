@@ -56,6 +56,7 @@ public class TitaniumItemGroup {
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> {
             content.addAfter(Items.GOLDEN_SWORD, TitaniumItems.TITANIUM_SWORD);
+            content.addAfter(Items.GOLDEN_AXE, TitaniumItems.TITANIUM_AXE);
             content.addAfter(Items.GOLDEN_BOOTS, TitaniumItems.TITANIUM_HELMET);
             content.addAfter(TitaniumItems.TITANIUM_HELMET, TitaniumItems.TITANIUM_CHESTPLATE);
             content.addAfter(TitaniumItems.TITANIUM_CHESTPLATE, TitaniumItems.TITANIUM_LEGGINGS);

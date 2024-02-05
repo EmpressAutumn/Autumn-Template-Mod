@@ -10,7 +10,7 @@ public class TitaniumTools implements ToolMaterial {
 
     @Override
     public float getMiningSpeedMultiplier() {
-        return 2.0F;
+        return 9.0F;
     }
 
     @Override
@@ -30,7 +30,7 @@ public class TitaniumTools implements ToolMaterial {
 
     @Override
     public float getAttackDamage() {
-        return 9.0F;
+        return 2.0F;
     }
 
     @Override
