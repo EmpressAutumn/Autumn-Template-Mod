@@ -3,6 +3,7 @@ package com.atom596.titanium;
 import com.atom596.titanium.block.TitaniumBlocks;
 import com.atom596.titanium.item.TitaniumItemGroup;
 import com.atom596.titanium.item.TitaniumItems;
+import com.atom596.titanium.world.gen.TitaniumWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -16,5 +17,7 @@ public class Titanium implements ModInitializer {
 		TitaniumItems.register();
 		TitaniumBlocks.register();
 		TitaniumItemGroup.register();
+
+		TitaniumWorldGeneration.generateModWorldGen();
 	}
 }

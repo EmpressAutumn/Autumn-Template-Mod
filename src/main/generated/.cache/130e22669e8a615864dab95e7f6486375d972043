@@ -1,10 +1,10 @@
-// 1.20.4	2024-02-05T16:01:54.5161812	Titanium/Model Definitions
+// 1.20.4	2024-02-05T17:06:17.0790645	Titanium/Model Definitions
 e0c60320e94e5d876caf5db971017c564d2b52e3 assets\titanium\blockstates\deepslate_titanium_ore.json
 b9ab004f7892f3b08e2dfb1181cd001579110f57 assets\titanium\models\item\titanium_chestplate.json
 2d1a0a57ba4b82755a917b6bac14f13f839767f3 assets\titanium\models\item\raw_titanium.json
 7786475ccc60c57b0f8753a66d1c1aa91ebdf1ad assets\titanium\models\item\titanium_pickaxe.json
-e6cb7cbe6e9ad09e1c77b221aa81fb6c6c281ee0 assets\titanium\models\item\titanium_shovel.json
 f542e849d8f61855942377bddbcd72574245a98d assets\titanium\models\item\titanium_ore.json
+e6cb7cbe6e9ad09e1c77b221aa81fb6c6c281ee0 assets\titanium\models\item\titanium_shovel.json
 b111702b740c70103c3e193d53b398f65cf31641 assets\titanium\blockstates\raw_titanium_block.json
 13b448d892e18db065991245bedf98f1495faee6 assets\titanium\models\item\titanium_sword.json
 a0555e40980d02acc693771d2853772f9d55f840 assets\titanium\models\item\titanium_helmet.json
