@@ -5,8 +5,8 @@ import com.atom596.titanium.item.TitaniumItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 
-public class TitaniumLootTableProvider extends FabricBlockLootTableProvider {
-    public TitaniumLootTableProvider(FabricDataOutput dataOutput) {
+public class TitaniumBlockLootTableProvider extends FabricBlockLootTableProvider {
+    public TitaniumBlockLootTableProvider(FabricDataOutput dataOutput) {
         super(dataOutput);
     }
 
