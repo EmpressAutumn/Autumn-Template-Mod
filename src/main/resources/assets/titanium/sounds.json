@@ -1,0 +1,11 @@
+{
+  "music_disc_amethyst": {
+    "category": "records",
+    "sounds": [
+      {
+        "name": "titanium:amethyst",
+        "stream": true
+      }
+    ]
+  }
+}

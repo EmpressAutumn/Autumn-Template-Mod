@@ -6,6 +6,7 @@ import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 
 public class TitaniumItems {
     public static final ToolItem TITANIUM_SHOVEL = new ShovelItem(TitaniumTools.INSTANCE, 1.5F, -3.0F, new FabricItemSettings());
@@ -19,6 +20,12 @@ public class TitaniumItems {
     public static final ArmorItem TITANIUM_BOOTS = new ArmorItem(TitaniumArmor.INSTANCE, ArmorItem.Type.BOOTS, new FabricItemSettings());
     public static final Item RAW_TITANIUM = new Item(new FabricItemSettings());
     public static final Item TITANIUM_INGOT = new Item(new FabricItemSettings());
+    public static final Item MUSIC_DISC_AMETHYST = new MusicDiscItem(
+            14,
+            TitaniumSounds.MUSIC_DISC_AMETHYST,
+            new FabricItemSettings().maxCount(1).rarity(Rarity.RARE),
+            144
+    );
 
     public static void register() {
         Registry.register(Registries.ITEM, new Identifier(Titanium.MOD_ID, "titanium_helmet"), TITANIUM_HELMET);
@@ -32,5 +39,6 @@ public class TitaniumItems {
         Registry.register(Registries.ITEM, new Identifier(Titanium.MOD_ID, "titanium_hoe"), TITANIUM_HOE);
         Registry.register(Registries.ITEM, new Identifier(Titanium.MOD_ID, "raw_titanium"), RAW_TITANIUM);
         Registry.register(Registries.ITEM, new Identifier(Titanium.MOD_ID, "titanium_ingot"), TITANIUM_INGOT);
+        Registry.register(Registries.ITEM, new Identifier(Titanium.MOD_ID, "music_disc_amethyst"), MUSIC_DISC_AMETHYST);
     }
 }

@@ -34,6 +34,7 @@ public class TitaniumItemGroup {
                 entries.add(TitaniumItems.TITANIUM_BOOTS);
                 entries.add(TitaniumItems.RAW_TITANIUM);
                 entries.add(TitaniumItems.TITANIUM_INGOT);
+                entries.add(TitaniumItems.MUSIC_DISC_AMETHYST);
             })
             .build();
 
@@ -53,6 +54,7 @@ public class TitaniumItemGroup {
             content.addAfter(TitaniumItems.TITANIUM_SHOVEL, TitaniumItems.TITANIUM_PICKAXE);
             content.addAfter(TitaniumItems.TITANIUM_PICKAXE, TitaniumItems.TITANIUM_AXE);
             content.addAfter(TitaniumItems.TITANIUM_AXE, TitaniumItems.TITANIUM_HOE);
+            content.addAfter(Items.MUSIC_DISC_PIGSTEP, TitaniumItems.MUSIC_DISC_AMETHYST);
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> {
             content.addAfter(Items.GOLDEN_SWORD, TitaniumItems.TITANIUM_SWORD);
