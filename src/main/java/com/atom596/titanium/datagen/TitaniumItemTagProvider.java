@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 import org.jetbrains.annotations.Nullable;
@@ -32,5 +33,8 @@ public class TitaniumItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
         getOrCreateTagBuilder(TagKey.of(RegistryKeys.ITEM, new Identifier("fabric", "swords")))
                 .add(TitaniumItems.TITANIUM_SWORD);
+
+        getOrCreateTagBuilder(ItemTags.MUSIC_DISCS)
+                .add(TitaniumItems.MUSIC_DISC_AMETHYST);
     }
 }

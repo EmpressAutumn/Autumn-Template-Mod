@@ -1,4 +1,4 @@
-package com.atom596.titanium.item;
+package com.atom596.titanium.sound;
 
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;

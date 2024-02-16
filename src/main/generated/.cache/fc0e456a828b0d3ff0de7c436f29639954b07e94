@@ -1,6 +1,7 @@
-// 1.20.4	2024-02-16T01:02:43.6284274	Titanium/Tags for minecraft:item
+// 1.20.4	2024-02-16T10:09:34.0809715	Titanium/Tags for minecraft:item
 2a186cdc91b83a46ade5894dc10cd043cef0c7cc data\fabric\tags\items\swords.json
 758fc896a1c5fb6a5ca958cef5066c539ebc193f data\fabric\tags\items\axes.json
 89b0efee69794169293c204cbbf104952bcc8544 data\fabric\tags\items\shovels.json
 49490c758ba9aaee94e1f6192fc4a2eb56bde4d8 data\fabric\tags\items\hoes.json
 ab93c62885c7a9aaf84f8aa8c17a2530ea0dd93e data\fabric\tags\items\pickaxes.json
+5954df4ab7bd92ee03d4f1f4fa11ed3169b247af data\minecraft\tags\items\music_discs.json

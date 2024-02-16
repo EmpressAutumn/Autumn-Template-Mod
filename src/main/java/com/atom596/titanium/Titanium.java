@@ -3,7 +3,7 @@ package com.atom596.titanium;
 import com.atom596.titanium.block.TitaniumBlocks;
 import com.atom596.titanium.item.TitaniumItemGroup;
 import com.atom596.titanium.item.TitaniumItems;
-import com.atom596.titanium.item.TitaniumSounds;
+import com.atom596.titanium.sound.TitaniumSounds;
 import com.atom596.titanium.world.gen.TitaniumWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 import org.apache.logging.log4j.LogManager;

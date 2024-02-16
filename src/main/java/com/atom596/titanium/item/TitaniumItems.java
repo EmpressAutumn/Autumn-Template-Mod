@@ -1,6 +1,7 @@
 package com.atom596.titanium.item;
 
 import com.atom596.titanium.Titanium;
+import com.atom596.titanium.sound.TitaniumSounds;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
