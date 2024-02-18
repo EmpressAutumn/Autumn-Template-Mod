@@ -22,7 +22,7 @@ public class TitaniumPlacedFeatures {
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
         register(context, TITANIUM_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(TitaniumConfiguredFeatures.TITANIUM_ORE_KEY),
-                TitaniumOrePlacement.modifiersWithCount(4, HeightRangePlacementModifier.uniform(YOffset.BOTTOM, YOffset.fixed(20))));
+                TitaniumOrePlacement.modifiersWithCount(8, HeightRangePlacementModifier.trapezoid(YOffset.BOTTOM, YOffset.fixed(30))));
         register(context, END_TITANIUM_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(TitaniumConfiguredFeatures.END_TITANIUM_ORE_KEY),
                 TitaniumOrePlacement.modifiersWithCount(16, HeightRangePlacementModifier.uniform(YOffset.BOTTOM, YOffset.TOP)));
     }

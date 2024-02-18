@@ -30,8 +30,8 @@ public class TitaniumConfiguredFeatures {
         List<OreFeatureConfig.Target> endTitaniumOre =
                 List.of(OreFeatureConfig.createTarget(endReplaceables, TitaniumBlocks.END_TITANIUM_ORE.getDefaultState()));
 
-        register(context, TITANIUM_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldTitaniumOres, 12));
-        register(context, END_TITANIUM_ORE_KEY, Feature.ORE, new OreFeatureConfig(endTitaniumOre, 12));
+        register(context, TITANIUM_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldTitaniumOres, 4));
+        register(context, END_TITANIUM_ORE_KEY, Feature.ORE, new OreFeatureConfig(endTitaniumOre, 6));
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {
