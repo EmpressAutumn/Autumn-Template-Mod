@@ -24,8 +24,10 @@ public class TitaniumMixin {
 		int radius = context.getConfig().outerWallDistance.get(random);
 
 		BlockPos barrelPos = context.getOrigin().add(radius, 0, radius);
-		while(!structureWorldAccess.isAir(barrelPos)) {
-			barrelPos = barrelPos.add(0, 1, 0);
+		for(int i = 0; i < 2 * radius; i++) {
+			if(!structureWorldAccess.isAir(barrelPos)) {
+				barrelPos = barrelPos.add(0, 1, 0);
+			}
 		}
 
 		structureWorldAccess.setBlockState(barrelPos, Blocks.BARREL.getDefaultState(), Block.NOTIFY_LISTENERS);
