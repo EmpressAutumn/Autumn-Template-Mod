@@ -4,7 +4,6 @@ import com.atom596.titanium.Titanium;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.inventory.LootableInventory;
-import net.minecraft.loot.LootTables;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.random.Random;
