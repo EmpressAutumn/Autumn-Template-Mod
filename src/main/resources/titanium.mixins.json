@@ -3,7 +3,7 @@
 	"package": "com.atom596.titanium.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"ExampleMixin"
+		"TitaniumMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

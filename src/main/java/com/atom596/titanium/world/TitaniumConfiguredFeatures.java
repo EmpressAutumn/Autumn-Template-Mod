@@ -11,10 +11,7 @@ import net.minecraft.structure.rule.BlockMatchRuleTest;
 import net.minecraft.structure.rule.RuleTest;
 import net.minecraft.structure.rule.TagMatchRuleTest;
 import net.minecraft.util.Identifier;
-import net.minecraft.world.gen.feature.ConfiguredFeature;
-import net.minecraft.world.gen.feature.Feature;
-import net.minecraft.world.gen.feature.FeatureConfig;
-import net.minecraft.world.gen.feature.OreFeatureConfig;
+import net.minecraft.world.gen.feature.*;
 
 import java.util.List;
 
