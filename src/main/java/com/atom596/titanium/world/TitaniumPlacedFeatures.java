@@ -24,7 +24,7 @@ public class TitaniumPlacedFeatures {
         register(context, TITANIUM_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(TitaniumConfiguredFeatures.TITANIUM_ORE_KEY),
                 TitaniumOrePlacement.modifiersWithCount(8, HeightRangePlacementModifier.trapezoid(YOffset.BOTTOM, YOffset.fixed(30))));
         register(context, END_TITANIUM_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(TitaniumConfiguredFeatures.END_TITANIUM_ORE_KEY),
-                TitaniumOrePlacement.modifiersWithCount(16, HeightRangePlacementModifier.uniform(YOffset.BOTTOM, YOffset.TOP)));
+                TitaniumOrePlacement.modifiersWithCount(48, HeightRangePlacementModifier.uniform(YOffset.BOTTOM, YOffset.TOP)));
     }
 
     public static RegistryKey<PlacedFeature> registerKey(String name) {
