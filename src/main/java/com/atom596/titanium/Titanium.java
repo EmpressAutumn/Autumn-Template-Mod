@@ -1,6 +1,7 @@
 package com.atom596.titanium;
 
 import com.atom596.titanium.block.TitaniumBlocks;
+import com.atom596.titanium.item.TitaniumArmorMaterial;
 import com.atom596.titanium.item.TitaniumItemGroup;
 import com.atom596.titanium.item.TitaniumItems;
 import com.atom596.titanium.sound.TitaniumSounds;
@@ -14,12 +15,14 @@ public class Titanium implements ModInitializer {
 	public static final Logger LOGGER = LogManager.getLogger(MOD_ID);
 
 	public void onInitialize() {
-		//LOGGER.info("Initializing Titanium...");
+		TitaniumArmorMaterial.initialize();
+
 		TitaniumSounds.register();
 		TitaniumItems.register();
 		TitaniumBlocks.register();
 		TitaniumItemGroup.register();
 
 		TitaniumWorldGeneration.generateModWorldGen();
+		LOGGER.info("Initialized Titanium by EmpressAutumn");
 	}
 }

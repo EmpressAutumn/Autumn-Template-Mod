@@ -11,9 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "titanium:titanium_ore"
-            ]
+            "items": "titanium:titanium_ore"
           }
         ]
       },

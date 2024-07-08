@@ -7,5 +7,7 @@
   "ingredient": {
     "item": "titanium:deepslate_titanium_ore"
   },
-  "result": "titanium:titanium_ingot"
+  "result": {
+    "id": "titanium:titanium_ingot"
+  }
 }

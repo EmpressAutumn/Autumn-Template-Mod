@@ -4,10 +4,13 @@ import com.atom596.titanium.block.TitaniumBlocks;
 import com.atom596.titanium.item.TitaniumItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
+import net.minecraft.registry.RegistryWrapper;
+
+import java.util.concurrent.CompletableFuture;
 
 public class TitaniumBlockLootTableProvider extends FabricBlockLootTableProvider {
-    public TitaniumBlockLootTableProvider(FabricDataOutput dataOutput) {
-        super(dataOutput);
+    public TitaniumBlockLootTableProvider(FabricDataOutput dataOutput, CompletableFuture<RegistryWrapper.WrapperLookup> completableFuture) {
+        super(dataOutput, completableFuture);
     }
 
     @Override

@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "titanium:deepslate_titanium_ore"
-            ]
+            "items": "titanium:deepslate_titanium_ore"
           }
         ]
       },

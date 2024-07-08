@@ -4,6 +4,8 @@ import com.atom596.titanium.Titanium;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.inventory.LootableInventory;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.random.Random;
@@ -31,6 +33,6 @@ public class TitaniumMixin {
 		}
 
 		structureWorldAccess.setBlockState(barrelPos, Blocks.BARREL.getDefaultState(), Block.NOTIFY_LISTENERS);
-		LootableInventory.setLootTable(structureWorldAccess, random, barrelPos, new Identifier(Titanium.MOD_ID, "chests/amethyst_barrel"));
+		LootableInventory.setLootTable(structureWorldAccess, random, barrelPos, RegistryKey.of(RegistryKeys.LOOT_TABLE, new Identifier(Titanium.MOD_ID, "chests/amethyst_barrel")));
 	}
 }

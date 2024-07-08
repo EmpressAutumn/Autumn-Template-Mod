@@ -9,9 +9,11 @@ import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
+import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.util.Identifier;
 
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
 
 public class TitaniumRecipeProvider extends FabricRecipeProvider {
     private static final List<ItemConvertible> TITANIUM_SMELTABLES = List.of(
@@ -21,8 +23,8 @@ public class TitaniumRecipeProvider extends FabricRecipeProvider {
             TitaniumBlocks.END_TITANIUM_ORE
     );
 
-    public TitaniumRecipeProvider(FabricDataOutput output) {
-        super(output);
+    public TitaniumRecipeProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> completableFuture) {
+        super(output, completableFuture);
     }
 
     @Override

@@ -5,24 +5,16 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "titanium:titanium_helmet"
-            ]
+            "items": "titanium:titanium_helmet"
           },
           {
-            "items": [
-              "titanium:titanium_chestplate"
-            ]
+            "items": "titanium:titanium_chestplate"
           },
           {
-            "items": [
-              "titanium:titanium_leggings"
-            ]
+            "items": "titanium:titanium_leggings"
           },
           {
-            "items": [
-              "titanium:titanium_boots"
-            ]
+            "items": "titanium:titanium_boots"
           }
         ]
       },
@@ -34,8 +26,8 @@
       "translate": "advancements.titanium.titanium_armor.description"
     },
     "icon": {
-      "item": "titanium:titanium_chestplate",
-      "nbt": "{Damage:0}"
+      "count": 1,
+      "id": "titanium:titanium_chestplate"
     },
     "title": {
       "translate": "advancements.titanium.titanium_armor.title"

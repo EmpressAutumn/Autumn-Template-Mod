@@ -8,18 +8,20 @@ import net.minecraft.advancement.Advancement;
 import net.minecraft.advancement.AdvancementEntry;
 import net.minecraft.advancement.AdvancementFrame;
 import net.minecraft.advancement.criterion.InventoryChangedCriterion;
+import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
+import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
 
 public class TitaniumAdvancementProvider extends FabricAdvancementProvider {
-    public TitaniumAdvancementProvider(FabricDataOutput output) {
-        super(output);
+    public TitaniumAdvancementProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> completableFuture) {
+        super(output, completableFuture);
     }
 
     @Override
-    public void generateAdvancement(Consumer<AdvancementEntry> consumer) {
+    public void generateAdvancement(RegistryWrapper.WrapperLookup registryLookup, Consumer<AdvancementEntry> consumer) {
         AdvancementEntry getTitaniumAdvancement = Advancement.Builder.create()
                 .display(
                         TitaniumItems.TITANIUM_INGOT,
@@ -31,7 +33,7 @@ public class TitaniumAdvancementProvider extends FabricAdvancementProvider {
                         true,
                         false
                 )
-                .parent(new Identifier("minecraft", "story/iron_tools"))
+                .parent(new AdvancementEntry(new Identifier("minecraft", "story/iron_tools"), null))
                 .criterion("got_titanium", InventoryChangedCriterion.Conditions.items(TitaniumItems.TITANIUM_INGOT))
                 .build(consumer, Titanium.MOD_ID + "/get_titanium");
 

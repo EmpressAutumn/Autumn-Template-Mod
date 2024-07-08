@@ -7,5 +7,7 @@
   "ingredient": {
     "item": "titanium:raw_titanium"
   },
-  "result": "titanium:titanium_ingot"
+  "result": {
+    "id": "titanium:titanium_ingot"
+  }
 }

@@ -13,18 +13,22 @@ import net.minecraft.loot.function.EnchantRandomlyLootFunction;
 import net.minecraft.loot.function.SetCountLootFunction;
 import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.util.Identifier;
 
+import java.util.concurrent.CompletableFuture;
 import java.util.function.BiConsumer;
 
 public class TitaniumChestLootTableProvider extends SimpleFabricLootTableProvider {
-    public TitaniumChestLootTableProvider(FabricDataOutput output) {
-        super(output, LootContextTypes.CHEST);
+    public TitaniumChestLootTableProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> completableFuture) {
+        super(output, completableFuture, LootContextTypes.CHEST);
     }
 
     @Override
-    public void accept(BiConsumer<Identifier, LootTable.Builder> biConsumer) {
-        biConsumer.accept(new Identifier(Titanium.MOD_ID, "chests/amethyst_barrel"), LootTable.builder()
+    public void accept(RegistryWrapper.WrapperLookup registryLookup, BiConsumer<RegistryKey<LootTable>, LootTable.Builder> consumer) {
+        consumer.accept(RegistryKey.of(RegistryKeys.LOOT_TABLE, new Identifier(Titanium.MOD_ID, "chests/amethyst_barrel")), LootTable.builder()
                 .pool(LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0f))
                         .with(ItemEntry.builder(TitaniumItems.MUSIC_DISC_AMETHYST)
                                 .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0f)))

@@ -5,24 +5,16 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "titanium:titanium_pickaxe"
-            ]
+            "items": "titanium:titanium_pickaxe"
           },
           {
-            "items": [
-              "titanium:titanium_shovel"
-            ]
+            "items": "titanium:titanium_shovel"
           },
           {
-            "items": [
-              "titanium:titanium_axe"
-            ]
+            "items": "titanium:titanium_axe"
           },
           {
-            "items": [
-              "titanium:titanium_hoe"
-            ]
+            "items": "titanium:titanium_hoe"
           }
         ]
       },
@@ -34,8 +26,8 @@
       "translate": "advancements.titanium.titanium_tools.description"
     },
     "icon": {
-      "item": "titanium:titanium_pickaxe",
-      "nbt": "{Damage:0}"
+      "count": 1,
+      "id": "titanium:titanium_pickaxe"
     },
     "title": {
       "translate": "advancements.titanium.titanium_tools.title"

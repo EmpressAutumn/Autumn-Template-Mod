@@ -2,7 +2,6 @@ package com.atom596.titanium.item;
 
 import com.atom596.titanium.Titanium;
 import com.atom596.titanium.sound.TitaniumSounds;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -10,21 +9,21 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 
 public class TitaniumItems {
-    public static final ToolItem TITANIUM_SHOVEL = new ShovelItem(TitaniumTools.INSTANCE, 1.5F, -3.0F, new FabricItemSettings());
-    public static final ToolItem TITANIUM_SWORD = new SwordItem(TitaniumTools.INSTANCE, 3, -2.4F, new FabricItemSettings());
-    public static final ToolItem TITANIUM_PICKAXE = new PickaxeItem(TitaniumTools.INSTANCE, 1, -2.8F, new FabricItemSettings());
-    public static final ToolItem TITANIUM_AXE = new AxeItem(TitaniumTools.INSTANCE, 6.0F, -3.1F, new FabricItemSettings());
-    public static final ToolItem TITANIUM_HOE = new HoeItem(TitaniumTools.INSTANCE, -2, -1.0F, new FabricItemSettings());
-    public static final ArmorItem TITANIUM_HELMET = new ArmorItem(TitaniumArmor.INSTANCE, ArmorItem.Type.HELMET, new FabricItemSettings());
-    public static final ArmorItem TITANIUM_CHESTPLATE = new ArmorItem(TitaniumArmor.INSTANCE, ArmorItem.Type.CHESTPLATE, new FabricItemSettings());
-    public static final ArmorItem TITANIUM_LEGGINGS = new ArmorItem(TitaniumArmor.INSTANCE, ArmorItem.Type.LEGGINGS, new FabricItemSettings());
-    public static final ArmorItem TITANIUM_BOOTS = new ArmorItem(TitaniumArmor.INSTANCE, ArmorItem.Type.BOOTS, new FabricItemSettings());
-    public static final Item RAW_TITANIUM = new Item(new FabricItemSettings());
-    public static final Item TITANIUM_INGOT = new Item(new FabricItemSettings());
+    public static final ToolItem TITANIUM_SHOVEL = new ShovelItem(TitaniumToolMaterial.INSTANCE, new Item.Settings());
+    public static final ToolItem TITANIUM_SWORD = new SwordItem(TitaniumToolMaterial.INSTANCE, new Item.Settings());
+    public static final ToolItem TITANIUM_PICKAXE = new PickaxeItem(TitaniumToolMaterial.INSTANCE,  new Item.Settings());
+    public static final ToolItem TITANIUM_AXE = new AxeItem(TitaniumToolMaterial.INSTANCE, new Item.Settings());
+    public static final ToolItem TITANIUM_HOE = new HoeItem(TitaniumToolMaterial.INSTANCE, new Item.Settings());
+    public static final ArmorItem TITANIUM_HELMET = new ArmorItem(TitaniumArmorMaterial.INSTANCE, ArmorItem.Type.HELMET, new Item.Settings());
+    public static final ArmorItem TITANIUM_CHESTPLATE = new ArmorItem(TitaniumArmorMaterial.INSTANCE, ArmorItem.Type.CHESTPLATE, new Item.Settings());
+    public static final ArmorItem TITANIUM_LEGGINGS = new ArmorItem(TitaniumArmorMaterial.INSTANCE, ArmorItem.Type.LEGGINGS, new Item.Settings());
+    public static final ArmorItem TITANIUM_BOOTS = new ArmorItem(TitaniumArmorMaterial.INSTANCE, ArmorItem.Type.BOOTS, new Item.Settings());
+    public static final Item RAW_TITANIUM = new Item(new Item.Settings());
+    public static final Item TITANIUM_INGOT = new Item(new Item.Settings());
     public static final Item MUSIC_DISC_AMETHYST = new MusicDiscItem(
             14,
             TitaniumSounds.MUSIC_DISC_AMETHYST,
-            new FabricItemSettings().maxCount(1).rarity(Rarity.RARE),
+            new Item.Settings().maxCount(1).rarity(Rarity.RARE),
             144
     );
 

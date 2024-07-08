@@ -11,9 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "titanium:titanium_ingot"
-            ]
+            "items": "titanium:titanium_ingot"
           }
         ]
       },
