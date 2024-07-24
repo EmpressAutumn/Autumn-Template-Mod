@@ -9,12 +9,12 @@ import net.minecraft.registry.tag.TagKey;
 public class TitaniumToolMaterial implements ToolMaterial {
     @Override
     public int getDurability() {
-        return 512;
+        return 768;
     }
 
     @Override
     public float getMiningSpeedMultiplier() {
-        return 9.0f;
+        return 7.2f;
     }
 
     @Override

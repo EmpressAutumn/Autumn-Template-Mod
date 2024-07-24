@@ -9,15 +9,15 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 
 public class TitaniumItems {
-    public static final ToolItem TITANIUM_SHOVEL = new ShovelItem(TitaniumToolMaterial.INSTANCE, new Item.Settings());
-    public static final ToolItem TITANIUM_SWORD = new SwordItem(TitaniumToolMaterial.INSTANCE, new Item.Settings());
-    public static final ToolItem TITANIUM_PICKAXE = new PickaxeItem(TitaniumToolMaterial.INSTANCE,  new Item.Settings());
-    public static final ToolItem TITANIUM_AXE = new AxeItem(TitaniumToolMaterial.INSTANCE, new Item.Settings());
-    public static final ToolItem TITANIUM_HOE = new HoeItem(TitaniumToolMaterial.INSTANCE, new Item.Settings());
-    public static final ArmorItem TITANIUM_HELMET = new ArmorItem(TitaniumArmorMaterial.INSTANCE, ArmorItem.Type.HELMET, new Item.Settings());
-    public static final ArmorItem TITANIUM_CHESTPLATE = new ArmorItem(TitaniumArmorMaterial.INSTANCE, ArmorItem.Type.CHESTPLATE, new Item.Settings());
-    public static final ArmorItem TITANIUM_LEGGINGS = new ArmorItem(TitaniumArmorMaterial.INSTANCE, ArmorItem.Type.LEGGINGS, new Item.Settings());
-    public static final ArmorItem TITANIUM_BOOTS = new ArmorItem(TitaniumArmorMaterial.INSTANCE, ArmorItem.Type.BOOTS, new Item.Settings());
+    public static final Item TITANIUM_SHOVEL = new ShovelItem(TitaniumToolMaterial.INSTANCE, new Item.Settings());
+    public static final Item TITANIUM_SWORD = new SwordItem(TitaniumToolMaterial.INSTANCE, new Item.Settings());
+    public static final Item TITANIUM_PICKAXE = new PickaxeItem(TitaniumToolMaterial.INSTANCE,  new Item.Settings());
+    public static final Item TITANIUM_AXE = new AxeItem(TitaniumToolMaterial.INSTANCE, new Item.Settings());
+    public static final Item TITANIUM_HOE = new HoeItem(TitaniumToolMaterial.INSTANCE, new Item.Settings());
+    public static final Item TITANIUM_HELMET = new ArmorItem(TitaniumArmorMaterial.INSTANCE, ArmorItem.Type.HELMET, new Item.Settings().maxCount(1));
+    public static final Item TITANIUM_CHESTPLATE = new ArmorItem(TitaniumArmorMaterial.INSTANCE, ArmorItem.Type.CHESTPLATE, new Item.Settings().maxCount(1));
+    public static final Item TITANIUM_LEGGINGS = new ArmorItem(TitaniumArmorMaterial.INSTANCE, ArmorItem.Type.LEGGINGS, new Item.Settings().maxCount(1));
+    public static final Item TITANIUM_BOOTS = new ArmorItem(TitaniumArmorMaterial.INSTANCE, ArmorItem.Type.BOOTS, new Item.Settings().maxCount(1));
     public static final Item RAW_TITANIUM = new Item(new Item.Settings());
     public static final Item TITANIUM_INGOT = new Item(new Item.Settings());
     public static final Item MUSIC_DISC_AMETHYST = new MusicDiscItem(
