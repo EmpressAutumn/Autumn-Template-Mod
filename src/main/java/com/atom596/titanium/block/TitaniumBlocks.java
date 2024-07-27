@@ -3,6 +3,9 @@ package com.atom596.titanium.block;
 import com.atom596.titanium.Titanium;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.LanternBlock;
+import net.minecraft.block.LightBlock;
+import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -16,6 +19,7 @@ public class TitaniumBlocks {
     public static final Block END_TITANIUM_ORE = new Block(AbstractBlock.Settings.create().strength(4.0F).sounds(BlockSoundGroup.STONE).requiresTool());
     public static final Block RAW_TITANIUM_BLOCK = new Block(AbstractBlock.Settings.create().strength(4.0F).sounds(BlockSoundGroup.STONE).requiresTool());
     public static final Block TITANIUM_BLOCK = new Block(AbstractBlock.Settings.create().strength(4.0F).sounds(BlockSoundGroup.METAL).requiresTool());
+    public static final Block TITANIUM_LANTERN = new LanternBlock(AbstractBlock.Settings.create().solid().requiresTool().strength(3.5f).sounds(BlockSoundGroup.LANTERN).luminance(state -> 15).nonOpaque().pistonBehavior(PistonBehavior.DESTROY));
 
     public static void register() {
         Registry.register(Registries.BLOCK, new Identifier(Titanium.MOD_ID, "titanium_ore"), TITANIUM_ORE);
@@ -28,5 +32,7 @@ public class TitaniumBlocks {
         Registry.register(Registries.ITEM, new Identifier(Titanium.MOD_ID, "raw_titanium_block"), new BlockItem(RAW_TITANIUM_BLOCK, new Item.Settings()));
         Registry.register(Registries.BLOCK, new Identifier(Titanium.MOD_ID, "titanium_block"), TITANIUM_BLOCK);
         Registry.register(Registries.ITEM, new Identifier(Titanium.MOD_ID, "titanium_block"), new BlockItem(TITANIUM_BLOCK, new Item.Settings()));
+        Registry.register(Registries.BLOCK, new Identifier(Titanium.MOD_ID, "titanium_lantern"), TITANIUM_LANTERN);
+        Registry.register(Registries.ITEM, new Identifier(Titanium.MOD_ID, "titanium_lantern"), new BlockItem(TITANIUM_LANTERN, new Item.Settings()));
     }
 }

@@ -20,6 +20,7 @@ public class TitaniumModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(TitaniumBlocks.END_TITANIUM_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(TitaniumBlocks.RAW_TITANIUM_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(TitaniumBlocks.TITANIUM_BLOCK);
+        blockStateModelGenerator.registerLantern(TitaniumBlocks.TITANIUM_LANTERN);
     }
 
     @Override

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "titanium:block/titanium_lantern"
+    },
+    "hanging=true": {
+      "model": "titanium:block/titanium_lantern_hanging"
+    }
+  }
+}

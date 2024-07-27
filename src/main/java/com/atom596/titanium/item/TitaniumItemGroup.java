@@ -23,6 +23,7 @@ public class TitaniumItemGroup {
                 entries.add(TitaniumBlocks.DEEPSLATE_TITANIUM_ORE);
                 entries.add(TitaniumBlocks.END_TITANIUM_ORE);
                 entries.add(TitaniumBlocks.RAW_TITANIUM_BLOCK);
+                entries.add(TitaniumBlocks.TITANIUM_LANTERN);
                 entries.add(TitaniumItems.TITANIUM_SHOVEL);
                 entries.add(TitaniumItems.TITANIUM_PICKAXE);
                 entries.add(TitaniumItems.TITANIUM_AXE);
@@ -52,6 +53,9 @@ public class TitaniumItemGroup {
             content.addAfter(TitaniumBlocks.TITANIUM_ORE, TitaniumBlocks.DEEPSLATE_TITANIUM_ORE);
             content.addAfter(Items.NETHER_QUARTZ_ORE, TitaniumBlocks.END_TITANIUM_ORE);
             content.addAfter(Items.RAW_GOLD_BLOCK, TitaniumBlocks.RAW_TITANIUM_BLOCK);
+        });
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(content -> {
+            content.addAfter(Items.LANTERN, TitaniumBlocks.TITANIUM_LANTERN);
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(content -> {
             content.addAfter(Items.GOLDEN_HOE, TitaniumItems.TITANIUM_SHOVEL);
