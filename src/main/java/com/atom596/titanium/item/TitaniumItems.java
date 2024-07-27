@@ -27,7 +27,7 @@ public class TitaniumItems {
             new Item.Settings().maxCount(1).rarity(Rarity.RARE),
             144
     );
-    public static final Item TITANIUM_HORSE_ARMOR = new Item(new Item.Settings().maxCount(1));
+    public static final Item TITANIUM_HORSE_ARMOR = new AnimalArmorItem(TitaniumArmorMaterial.INSTANCE, AnimalArmorItem.Type.EQUESTRIAN, false, new Item.Settings().maxCount(1));
     public static final Item END_POWDER = new Item(new Item.Settings());
     public static final Item FLIGHT_CHARGE = new FlightChargeItem(new Item.Settings());
 
