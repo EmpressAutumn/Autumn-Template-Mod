@@ -21,13 +21,13 @@ public class FlightChargeItem extends Item implements ProjectileItem {
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
-        world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ENTITY_WIND_CHARGE_THROW, SoundCategory.NEUTRAL, 0.5f, 0.4f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
+        world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ENTITY_WIND_CHARGE_WIND_BURST.value(), SoundCategory.NEUTRAL, 0.5f, 0.4f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
         ItemStack itemStack = user.getStackInHand(hand);
         if (user.getY() < world.getBottomY()) {
-            user.getItemCooldownManager().set(this, 25);
+            user.getItemCooldownManager().set(this, 40);
             user.addVelocity(0, 4, 0);
         } else {
-            user.getItemCooldownManager().set(this, 10);
+            user.getItemCooldownManager().set(this, 20);
             user.addVelocity(0, 1.5, 0);
         }
         user.incrementStat(Stats.USED.getOrCreateStat(this));
