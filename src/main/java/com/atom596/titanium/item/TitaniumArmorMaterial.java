@@ -28,7 +28,7 @@ public class TitaniumArmorMaterial {
                     15,
                     SoundEvents.ITEM_ARMOR_EQUIP_IRON,
                     () -> Ingredient.ofItems(TitaniumItems.TITANIUM_INGOT),
-                    List.of(new ArmorMaterial.Layer(new Identifier("titanium"))),
+                    List.of(new ArmorMaterial.Layer(new Identifier(Titanium.MOD_ID, "titanium"))),
                     1.0f,
                     0.0f
             )
