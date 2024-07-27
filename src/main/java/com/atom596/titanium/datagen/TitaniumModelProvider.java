@@ -29,8 +29,12 @@ public class TitaniumModelProvider extends FabricModelProvider {
         itemModelGenerator.register(TitaniumItems.TITANIUM_LEGGINGS, Models.GENERATED);
         itemModelGenerator.register(TitaniumItems.TITANIUM_BOOTS, Models.GENERATED);
         itemModelGenerator.register(TitaniumItems.RAW_TITANIUM, Models.GENERATED);
+        itemModelGenerator.register(TitaniumItems.TITANIUM_NUGGET, Models.GENERATED);
         itemModelGenerator.register(TitaniumItems.TITANIUM_INGOT, Models.GENERATED);
         itemModelGenerator.register(TitaniumItems.MUSIC_DISC_AMETHYST, Models.GENERATED);
+        itemModelGenerator.register(TitaniumItems.TITANIUM_HORSE_ARMOR, Models.GENERATED);
+        itemModelGenerator.register(TitaniumItems.END_POWDER, Models.GENERATED);
+        itemModelGenerator.register(TitaniumItems.FLIGHT_CHARGE, Models.GENERATED);
 
         itemModelGenerator.register(TitaniumItems.TITANIUM_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(TitaniumItems.TITANIUM_SWORD, Models.HANDHELD);

@@ -27,13 +27,17 @@ public class TitaniumItemGroup {
                 entries.add(TitaniumItems.TITANIUM_PICKAXE);
                 entries.add(TitaniumItems.TITANIUM_AXE);
                 entries.add(TitaniumItems.TITANIUM_HOE);
+                entries.add(TitaniumItems.FLIGHT_CHARGE);
                 entries.add(TitaniumItems.TITANIUM_SWORD);
                 entries.add(TitaniumItems.TITANIUM_HELMET);
                 entries.add(TitaniumItems.TITANIUM_CHESTPLATE);
                 entries.add(TitaniumItems.TITANIUM_LEGGINGS);
                 entries.add(TitaniumItems.TITANIUM_BOOTS);
+                entries.add(TitaniumItems.TITANIUM_HORSE_ARMOR);
                 entries.add(TitaniumItems.RAW_TITANIUM);
+                entries.add(TitaniumItems.TITANIUM_NUGGET);
                 entries.add(TitaniumItems.TITANIUM_INGOT);
+                entries.add(TitaniumItems.END_POWDER);
                 entries.add(TitaniumItems.MUSIC_DISC_AMETHYST);
             })
             .build();
@@ -54,6 +58,7 @@ public class TitaniumItemGroup {
             content.addAfter(TitaniumItems.TITANIUM_SHOVEL, TitaniumItems.TITANIUM_PICKAXE);
             content.addAfter(TitaniumItems.TITANIUM_PICKAXE, TitaniumItems.TITANIUM_AXE);
             content.addAfter(TitaniumItems.TITANIUM_AXE, TitaniumItems.TITANIUM_HOE);
+            content.addAfter(Items.FIRE_CHARGE, TitaniumItems.FLIGHT_CHARGE);
             content.addAfter(Items.MUSIC_DISC_PIGSTEP, TitaniumItems.MUSIC_DISC_AMETHYST);
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> {
@@ -63,10 +68,14 @@ public class TitaniumItemGroup {
             content.addAfter(TitaniumItems.TITANIUM_HELMET, TitaniumItems.TITANIUM_CHESTPLATE);
             content.addAfter(TitaniumItems.TITANIUM_CHESTPLATE, TitaniumItems.TITANIUM_LEGGINGS);
             content.addAfter(TitaniumItems.TITANIUM_LEGGINGS, TitaniumItems.TITANIUM_BOOTS);
+            content.addAfter(Items.DIAMOND_HORSE_ARMOR, TitaniumItems.TITANIUM_HORSE_ARMOR);
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(content -> {
             content.addAfter(Items.RAW_GOLD, TitaniumItems.RAW_TITANIUM);
+            content.addAfter(Items.GOLD_NUGGET, TitaniumItems.TITANIUM_NUGGET);
             content.addAfter(Items.GOLD_INGOT, TitaniumItems.TITANIUM_INGOT);
+            content.addAfter(Items.FIRE_CHARGE, TitaniumItems.FLIGHT_CHARGE);
+            content.addAfter(Items.BLAZE_POWDER, TitaniumItems.END_POWDER);
         });
     }
 }

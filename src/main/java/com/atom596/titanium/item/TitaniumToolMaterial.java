@@ -7,6 +7,9 @@ import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.TagKey;
 
 public class TitaniumToolMaterial implements ToolMaterial {
+
+    public static final TitaniumToolMaterial INSTANCE = new TitaniumToolMaterial();
+
     @Override
     public int getDurability() {
         return 768;
@@ -19,7 +22,7 @@ public class TitaniumToolMaterial implements ToolMaterial {
 
     @Override
     public float getAttackDamage() {
-        return 2.0f;
+        return 2.0f;  // 2 more than default
     }
 
     @Override
@@ -36,6 +39,4 @@ public class TitaniumToolMaterial implements ToolMaterial {
     public Ingredient getRepairIngredient() {
         return Ingredient.ofItems(TitaniumItems.TITANIUM_INGOT);
     }
-
-    public static final TitaniumToolMaterial INSTANCE = new TitaniumToolMaterial();
 }

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "item": "titanium:end_powder"
+    },
+    "T": {
+      "item": "titanium:titanium_nugget"
+    }
+  },
+  "pattern": [
+    "TTT",
+    "TST",
+    "TTT"
+  ],
+  "result": {
+    "count": 1,
+    "id": "titanium:flight_charge"
+  }
+}

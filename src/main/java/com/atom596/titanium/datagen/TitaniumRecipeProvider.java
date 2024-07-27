@@ -34,10 +34,24 @@ public class TitaniumRecipeProvider extends FabricRecipeProvider {
         offerBlasting(exporter, TITANIUM_SMELTABLES, RecipeCategory.MISC, TitaniumItems.TITANIUM_INGOT,
                 0.1f, 100, "titanium");
 
-        offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, TitaniumItems.TITANIUM_INGOT,
-                RecipeCategory.DECORATIONS, TitaniumBlocks.TITANIUM_BLOCK);
-        offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, TitaniumItems.RAW_TITANIUM,
-                RecipeCategory.DECORATIONS, TitaniumBlocks.RAW_TITANIUM_BLOCK);
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, TitaniumItems.TITANIUM_INGOT,
+                RecipeCategory.BUILDING_BLOCKS, TitaniumBlocks.TITANIUM_BLOCK);
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, TitaniumItems.RAW_TITANIUM,
+                RecipeCategory.BUILDING_BLOCKS, TitaniumBlocks.RAW_TITANIUM_BLOCK);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, TitaniumItems.TITANIUM_INGOT, 1)
+                .pattern("TTT")
+                .pattern("TTT")
+                .pattern("TTT")
+                .input('T', TitaniumItems.TITANIUM_NUGGET)
+                .criterion(hasItem(TitaniumItems.TITANIUM_NUGGET), conditionsFromItem(TitaniumItems.TITANIUM_NUGGET))
+                .offerTo(exporter, new Identifier("titanium:titanium_nugget_from_ingot"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, TitaniumItems.TITANIUM_NUGGET, 9)
+                .pattern("T")
+                .input('T', TitaniumItems.TITANIUM_INGOT)
+                .criterion(hasItem(TitaniumItems.TITANIUM_INGOT), conditionsFromItem(TitaniumItems.TITANIUM_INGOT))
+                .offerTo(exporter, new Identifier("titanium:titanium_ingot_from_nugget"));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, TitaniumItems.TITANIUM_HELMET, 1)
                 .pattern("TTT")
@@ -113,5 +127,29 @@ public class TitaniumRecipeProvider extends FabricRecipeProvider {
                 .input('S', Items.STICK)
                 .criterion(hasItem(TitaniumItems.TITANIUM_INGOT), conditionsFromItem(TitaniumItems.TITANIUM_INGOT))
                 .offerTo(exporter, new Identifier(getRecipeName(TitaniumItems.TITANIUM_HOE)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, TitaniumItems.TITANIUM_HORSE_ARMOR, 1)
+                .pattern("NLN")
+                .pattern("IIN")
+                .input('I', TitaniumItems.TITANIUM_INGOT)
+                .input('N', TitaniumItems.TITANIUM_NUGGET)
+                .input('L', Items.LEATHER)
+                .criterion(hasItem(TitaniumItems.TITANIUM_INGOT), conditionsFromItem(TitaniumItems.TITANIUM_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(TitaniumItems.TITANIUM_HORSE_ARMOR)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, TitaniumItems.END_POWDER, 2)
+                .pattern("T")
+                .input('T', Items.ENDER_PEARL)
+                .criterion(hasItem(Items.ENDER_PEARL), conditionsFromItem(Items.ENDER_PEARL))
+                .offerTo(exporter, new Identifier(getRecipeName(TitaniumItems.END_POWDER)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, TitaniumItems.FLIGHT_CHARGE, 1)
+                .pattern("TTT")
+                .pattern("TST")
+                .pattern("TTT")
+                .input('T', TitaniumItems.TITANIUM_NUGGET)
+                .input('S', TitaniumItems.END_POWDER)
+                .criterion(hasItem(TitaniumItems.END_POWDER), conditionsFromItem(TitaniumItems.END_POWDER))
+                .offerTo(exporter, new Identifier(getRecipeName(TitaniumItems.FLIGHT_CHARGE)));
     }
 }
