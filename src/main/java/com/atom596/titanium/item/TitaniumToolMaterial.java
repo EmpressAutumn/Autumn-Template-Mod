@@ -22,7 +22,7 @@ public class TitaniumToolMaterial implements ToolMaterial {
 
     @Override
     public float getAttackDamage() {
-        return 2.0f;  // 2 more than default
+        return 2.5f;  // 2 more than default
     }
 
     @Override
