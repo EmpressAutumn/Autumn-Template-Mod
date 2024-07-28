@@ -1,6 +1,7 @@
 package com.atom596.titanium.datagen;
 
 import com.atom596.titanium.Titanium;
+import com.atom596.titanium.block.TitaniumBlocks;
 import com.atom596.titanium.item.TitaniumItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.SimpleFabricLootTableProvider;
@@ -38,8 +39,14 @@ public class TitaniumChestLootTableProvider extends SimpleFabricLootTableProvide
                                 .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0f)))
                                 .apply(EnchantRandomlyLootFunction.create())
                         )
-                ).pool(LootPool.builder().rolls(UniformLootNumberProvider.create(2.0f, 3.0f))
+                ).pool(LootPool.builder().rolls(UniformLootNumberProvider.create(1.0f, 3.0f))
                         .with(ItemEntry.builder(TitaniumItems.TITANIUM_INGOT)
+                                .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 4.0f)))
+                        ).with(ItemEntry.builder(TitaniumItems.RAW_TITANIUM)
+                                .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(2.0f, 4.0f)))
+                        )
+                ).pool(LootPool.builder().rolls(UniformLootNumberProvider.create(1.0f, 2.0f))
+                        .with(ItemEntry.builder(TitaniumItems.TITANIUM_NUGGET)
                                 .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 4.0f)))
                         ).with(ItemEntry.builder(TitaniumItems.RAW_TITANIUM)
                                 .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(2.0f, 4.0f)))
@@ -51,7 +58,7 @@ public class TitaniumChestLootTableProvider extends SimpleFabricLootTableProvide
                                 .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 2.0f)))
                         )
                 ).pool(LootPool.builder().rolls(UniformLootNumberProvider.create(1.0f, 2.0f))
-                        .with(ItemEntry.builder(Items.LANTERN)
+                        .with(ItemEntry.builder(TitaniumBlocks.TITANIUM_LANTERN)
                                 .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0f)))
                         )
                 )

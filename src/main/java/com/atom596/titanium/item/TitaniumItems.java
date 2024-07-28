@@ -30,6 +30,7 @@ public class TitaniumItems {
     public static final Item TITANIUM_HORSE_ARMOR = new AnimalArmorItem(TitaniumArmorMaterial.INSTANCE, AnimalArmorItem.Type.EQUESTRIAN, false, new Item.Settings().maxCount(1));
     public static final Item END_POWDER = new Item(new Item.Settings());
     public static final Item FLIGHT_CHARGE = new FlightChargeItem(new Item.Settings());
+    public static final Item TESTING_WAND = new TestingWandItem();
 
     public static void register() {
         Registry.register(Registries.ITEM, new Identifier(Titanium.MOD_ID, "titanium_helmet"), TITANIUM_HELMET);
@@ -48,5 +49,6 @@ public class TitaniumItems {
         Registry.register(Registries.ITEM, new Identifier(Titanium.MOD_ID, "titanium_horse_armor"), TITANIUM_HORSE_ARMOR);
         Registry.register(Registries.ITEM, new Identifier(Titanium.MOD_ID, "end_powder"), END_POWDER);
         Registry.register(Registries.ITEM, new Identifier(Titanium.MOD_ID, "flight_charge"), FLIGHT_CHARGE);
+        Registry.register(Registries.ITEM, new Identifier(Titanium.MOD_ID, "testing_wand"), TESTING_WAND);
     }
 }
