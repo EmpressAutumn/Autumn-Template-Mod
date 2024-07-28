@@ -3,8 +3,6 @@ package com.atom596.titanium.block;
 import com.atom596.titanium.Titanium;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
-import net.minecraft.block.LanternBlock;
-import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -18,7 +16,7 @@ public class TitaniumBlocks {
     public static final Block END_TITANIUM_ORE = new Block(AbstractBlock.Settings.create().strength(4.0F).sounds(BlockSoundGroup.STONE).requiresTool());
     public static final Block RAW_TITANIUM_BLOCK = new Block(AbstractBlock.Settings.create().strength(4.0F).sounds(BlockSoundGroup.STONE).requiresTool());
     public static final Block TITANIUM_BLOCK = new Block(AbstractBlock.Settings.create().strength(4.0F).sounds(BlockSoundGroup.METAL).requiresTool());
-    public static final Block TITANIUM_LANTERN = new LanternBlock(AbstractBlock.Settings.create().solid().requiresTool().strength(3.5f).sounds(BlockSoundGroup.LANTERN).luminance(state -> 15).nonOpaque().pistonBehavior(PistonBehavior.DESTROY));
+    public static final Block TITANIUM_LANTERN = new TitaniumLanternBlock();
 
     public static void register() {
         Registry.register(Registries.BLOCK, new Identifier(Titanium.MOD_ID, "titanium_ore"), TITANIUM_ORE);
