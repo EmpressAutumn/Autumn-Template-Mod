@@ -4,7 +4,6 @@ import com.atom596.titanium.Titanium;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.LanternBlock;
-import net.minecraft.block.LightBlock;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;

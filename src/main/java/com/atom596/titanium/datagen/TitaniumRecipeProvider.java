@@ -137,6 +137,15 @@ public class TitaniumRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(TitaniumItems.TITANIUM_INGOT), conditionsFromItem(TitaniumItems.TITANIUM_INGOT))
                 .offerTo(exporter, new Identifier(getRecipeName(TitaniumItems.TITANIUM_HORSE_ARMOR)));
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, TitaniumBlocks.TITANIUM_LANTERN, 1)
+                .pattern("NNN")
+                .pattern("NTN")
+                .pattern("NNN")
+                .input('N', TitaniumItems.TITANIUM_NUGGET)
+                .input('T', Items.REDSTONE_TORCH)
+                .criterion(hasItem(TitaniumItems.TITANIUM_NUGGET), conditionsFromItem(TitaniumItems.TITANIUM_NUGGET))
+                .offerTo(exporter, new Identifier(getRecipeName(TitaniumBlocks.TITANIUM_LANTERN)));
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, TitaniumItems.END_POWDER, 2)
                 .pattern("T")
                 .input('T', Items.ENDER_PEARL)
