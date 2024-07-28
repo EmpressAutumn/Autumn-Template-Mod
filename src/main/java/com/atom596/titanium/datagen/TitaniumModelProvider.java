@@ -42,5 +42,6 @@ public class TitaniumModelProvider extends FabricModelProvider {
         itemModelGenerator.register(TitaniumItems.TITANIUM_PICKAXE, Models.HANDHELD);
         itemModelGenerator.register(TitaniumItems.TITANIUM_AXE, Models.HANDHELD);
         itemModelGenerator.register(TitaniumItems.TITANIUM_HOE, Models.HANDHELD);
+        itemModelGenerator.register(TitaniumItems.TESTING_WAND, Models.HANDHELD);
     }
 }

@@ -79,7 +79,47 @@
       "rolls": {
         "type": "minecraft:uniform",
         "max": 3.0,
-        "min": 2.0
+        "min": 1.0
+      }
+    },
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 4.0,
+                "min": 1.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "titanium:titanium_nugget"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 4.0,
+                "min": 2.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "titanium:raw_titanium"
+        }
+      ],
+      "rolls": {
+        "type": "minecraft:uniform",
+        "max": 2.0,
+        "min": 1.0
       }
     },
     {
@@ -134,7 +174,7 @@
               "function": "minecraft:set_count"
             }
           ],
-          "name": "minecraft:lantern"
+          "name": "titanium:titanium_lantern"
         }
       ],
       "rolls": {
