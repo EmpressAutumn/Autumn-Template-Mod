@@ -17,6 +17,7 @@ public class TitaniumBlockLootTableProvider extends FabricBlockLootTableProvider
     public void generate() {
         addDrop(TitaniumBlocks.TITANIUM_BLOCK);
         addDrop(TitaniumBlocks.RAW_TITANIUM_BLOCK);
+        addDrop(TitaniumBlocks.TITANIUM_LANTERN);
 
         addDrop(TitaniumBlocks.TITANIUM_ORE, oreDrops(TitaniumBlocks.TITANIUM_ORE, TitaniumItems.RAW_TITANIUM));
         addDrop(TitaniumBlocks.DEEPSLATE_TITANIUM_ORE, oreDrops(TitaniumBlocks.DEEPSLATE_TITANIUM_ORE, TitaniumItems.RAW_TITANIUM));
