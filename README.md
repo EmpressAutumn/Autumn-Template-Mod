@@ -2,8 +2,9 @@
 *It adds titanium to the game. That's about it.*
 
 ### Credits
-- EmpressAutumn
-- ipopkat (former)
+- ipopkat (former developer)
+- EmpressAutumn (developer)
+- Jamiscus (textures)
 - DestoLynx (music)
 
 ### License
