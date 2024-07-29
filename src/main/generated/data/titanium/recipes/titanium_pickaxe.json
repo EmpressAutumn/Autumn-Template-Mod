@@ -16,5 +16,6 @@
   ],
   "result": {
     "item": "titanium:titanium_pickaxe"
-  }
+  },
+  "show_notification": true
 }

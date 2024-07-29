@@ -22,13 +22,14 @@
   },
   "requirements": [
     [
-      "has_the_recipe",
-      "has_raw_titanium"
+      "has_raw_titanium",
+      "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
       "minecraft:titanium_ingot_from_smelting_raw_titanium"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

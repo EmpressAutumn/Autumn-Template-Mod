@@ -5,7 +5,6 @@ import com.atom596.titanium.item.TitaniumItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricAdvancementProvider;
 import net.minecraft.advancement.Advancement;
-import net.minecraft.advancement.AdvancementEntry;
 import net.minecraft.advancement.AdvancementFrame;
 import net.minecraft.advancement.criterion.InventoryChangedCriterion;
 import net.minecraft.text.Text;
@@ -19,8 +18,8 @@ public class TitaniumAdvancementProvider extends FabricAdvancementProvider {
     }
 
     @Override
-    public void generateAdvancement(Consumer<AdvancementEntry> consumer) {
-        AdvancementEntry getTitaniumAdvancement = Advancement.Builder.create()
+    public void generateAdvancement(Consumer<Advancement> consumer) {
+        Advancement getTitaniumAdvancement = Advancement.Builder.create()
                 .display(
                         TitaniumItems.TITANIUM_INGOT,
                         Text.translatable("advancements.titanium.get_titanium.title"),
@@ -35,7 +34,7 @@ public class TitaniumAdvancementProvider extends FabricAdvancementProvider {
                 .criterion("got_titanium", InventoryChangedCriterion.Conditions.items(TitaniumItems.TITANIUM_INGOT))
                 .build(consumer, Titanium.MOD_ID + "/get_titanium");
 
-        AdvancementEntry titaniumToolsAdvancement = Advancement.Builder.create()
+        Advancement titaniumToolsAdvancement = Advancement.Builder.create()
                 .display(
                         TitaniumItems.TITANIUM_PICKAXE,
                         Text.translatable("advancements.titanium.titanium_tools.title"),
@@ -55,7 +54,7 @@ public class TitaniumAdvancementProvider extends FabricAdvancementProvider {
                 ))
                 .build(consumer, Titanium.MOD_ID + "/titanium_tools");
 
-        AdvancementEntry titaniumArmorAdvancement = Advancement.Builder.create()
+        Advancement titaniumArmorAdvancement = Advancement.Builder.create()
                 .display(
                         TitaniumItems.TITANIUM_CHESTPLATE,
                         Text.translatable("advancements.titanium.titanium_armor.title"),

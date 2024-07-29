@@ -22,13 +22,14 @@
   },
   "requirements": [
     [
-      "has_the_recipe",
-      "has_end_titanium_ore"
+      "has_end_titanium_ore",
+      "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
       "minecraft:titanium_ingot_from_blasting_end_titanium_ore"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

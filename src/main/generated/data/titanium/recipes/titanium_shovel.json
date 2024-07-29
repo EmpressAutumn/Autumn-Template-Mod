@@ -16,5 +16,6 @@
   ],
   "result": {
     "item": "titanium:titanium_shovel"
-  }
+  },
+  "show_notification": true
 }

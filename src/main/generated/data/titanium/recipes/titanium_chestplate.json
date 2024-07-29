@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "titanium:titanium_chestplate"
-  }
+  },
+  "show_notification": true
 }

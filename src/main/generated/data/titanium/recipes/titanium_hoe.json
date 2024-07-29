@@ -16,5 +16,6 @@
   ],
   "result": {
     "item": "titanium:titanium_hoe"
-  }
+  },
+  "show_notification": true
 }

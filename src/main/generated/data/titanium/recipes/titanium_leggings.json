@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "titanium:titanium_leggings"
-  }
+  },
+  "show_notification": true
 }
