@@ -81,5 +81,8 @@ public class TitaniumItemGroup {
             content.addAfter(Items.FIRE_CHARGE, TitaniumItems.FLIGHT_CHARGE);
             content.addAfter(Items.BLAZE_POWDER, TitaniumItems.END_POWDER);
         });
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.OPERATOR).register(content -> {
+            content.addAfter(Items.DEBUG_STICK, TitaniumItems.TESTING_WAND);
+        });
     }
 }

@@ -18,7 +18,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(GeodeFeature.class)
-public class TitaniumMixin {
+public class GeodeBarrelMixin {
 	@Inject(at = @At("RETURN"), method = "generate")
 	private void gen_barrel(FeatureContext<GeodeFeatureConfig> context, CallbackInfoReturnable<Boolean> cir) {
 		StructureWorldAccess structureWorldAccess = context.getWorld();

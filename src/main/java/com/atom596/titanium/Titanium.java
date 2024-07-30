@@ -4,6 +4,7 @@ import com.atom596.titanium.block.TitaniumBlocks;
 import com.atom596.titanium.item.TitaniumArmorMaterial;
 import com.atom596.titanium.item.TitaniumItemGroup;
 import com.atom596.titanium.item.TitaniumItems;
+import com.atom596.titanium.item.TitaniumPotions;
 import com.atom596.titanium.sound.TitaniumSounds;
 import com.atom596.titanium.world.gen.TitaniumWorldGeneration;
 import net.fabricmc.api.ModInitializer;
@@ -16,6 +17,7 @@ public class Titanium implements ModInitializer {
 
 	public void onInitialize() {
 		TitaniumArmorMaterial.initialize();
+		TitaniumPotions.initialize();
 
 		TitaniumSounds.register();
 		TitaniumItems.register();
