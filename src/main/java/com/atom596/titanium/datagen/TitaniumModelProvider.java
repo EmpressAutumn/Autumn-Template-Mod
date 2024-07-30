@@ -20,7 +20,6 @@ public class TitaniumModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(TitaniumBlocks.END_TITANIUM_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(TitaniumBlocks.RAW_TITANIUM_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(TitaniumBlocks.TITANIUM_BLOCK);
-        blockStateModelGenerator.registerLantern(TitaniumBlocks.TITANIUM_LANTERN);
     }
 
     @Override
@@ -36,6 +35,7 @@ public class TitaniumModelProvider extends FabricModelProvider {
         itemModelGenerator.register(TitaniumItems.TITANIUM_HORSE_ARMOR, Models.GENERATED);
         itemModelGenerator.register(TitaniumItems.END_POWDER, Models.GENERATED);
         itemModelGenerator.register(TitaniumItems.FLIGHT_CHARGE, Models.GENERATED);
+        itemModelGenerator.register(TitaniumItems.TITANIUM_LANTERN, Models.GENERATED);
 
         itemModelGenerator.register(TitaniumItems.TITANIUM_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(TitaniumItems.TITANIUM_SWORD, Models.HANDHELD);

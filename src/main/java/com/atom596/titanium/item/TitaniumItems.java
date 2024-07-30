@@ -1,6 +1,7 @@
 package com.atom596.titanium.item;
 
 import com.atom596.titanium.Titanium;
+import com.atom596.titanium.block.TitaniumBlocks;
 import com.atom596.titanium.sound.TitaniumSounds;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
@@ -32,6 +33,13 @@ public class TitaniumItems {
     public static final Item FLIGHT_CHARGE = new FlightChargeItem(new Item.Settings());
     public static final Item TESTING_WAND = new TestingWandItem();
 
+    public static final Item TITANIUM_ORE = new BlockItem(TitaniumBlocks.TITANIUM_ORE, new Item.Settings());
+    public static final Item DEEPSLATE_TITANIUM_ORE = new BlockItem(TitaniumBlocks.DEEPSLATE_TITANIUM_ORE, new Item.Settings());
+    public static final Item END_TITANIUM_ORE = new BlockItem(TitaniumBlocks.END_TITANIUM_ORE, new Item.Settings());
+    public static final Item RAW_TITANIUM_BLOCK = new BlockItem(TitaniumBlocks.RAW_TITANIUM_BLOCK, new Item.Settings());
+    public static final Item TITANIUM_BLOCK = new BlockItem(TitaniumBlocks.TITANIUM_BLOCK, new Item.Settings());
+    public static final Item TITANIUM_LANTERN = new BlockItem(TitaniumBlocks.TITANIUM_LANTERN, new Item.Settings());
+
     public static void register() {
         Registry.register(Registries.ITEM, new Identifier(Titanium.MOD_ID, "titanium_helmet"), TITANIUM_HELMET);
         Registry.register(Registries.ITEM, new Identifier(Titanium.MOD_ID, "titanium_chestplate"), TITANIUM_CHESTPLATE);
@@ -50,5 +58,12 @@ public class TitaniumItems {
         Registry.register(Registries.ITEM, new Identifier(Titanium.MOD_ID, "end_powder"), END_POWDER);
         Registry.register(Registries.ITEM, new Identifier(Titanium.MOD_ID, "flight_charge"), FLIGHT_CHARGE);
         Registry.register(Registries.ITEM, new Identifier(Titanium.MOD_ID, "testing_wand"), TESTING_WAND);
+
+        Registry.register(Registries.ITEM, new Identifier(Titanium.MOD_ID, "titanium_ore"), TITANIUM_ORE);
+        Registry.register(Registries.ITEM, new Identifier(Titanium.MOD_ID, "deepslate_titanium_ore"), DEEPSLATE_TITANIUM_ORE);
+        Registry.register(Registries.ITEM, new Identifier(Titanium.MOD_ID, "end_titanium_ore"), END_TITANIUM_ORE);
+        Registry.register(Registries.ITEM, new Identifier(Titanium.MOD_ID, "raw_titanium_block"), RAW_TITANIUM_BLOCK);
+        Registry.register(Registries.ITEM, new Identifier(Titanium.MOD_ID, "titanium_block"), TITANIUM_BLOCK);
+        Registry.register(Registries.ITEM, new Identifier(Titanium.MOD_ID, "titanium_lantern"), TITANIUM_LANTERN);
     }
 }

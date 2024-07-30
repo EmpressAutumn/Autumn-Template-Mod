@@ -3,8 +3,6 @@ package com.atom596.titanium.block;
 import com.atom596.titanium.Titanium;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
@@ -20,16 +18,10 @@ public class TitaniumBlocks {
 
     public static void register() {
         Registry.register(Registries.BLOCK, new Identifier(Titanium.MOD_ID, "titanium_ore"), TITANIUM_ORE);
-        Registry.register(Registries.ITEM, new Identifier(Titanium.MOD_ID, "titanium_ore"), new BlockItem(TITANIUM_ORE, new Item.Settings()));
         Registry.register(Registries.BLOCK, new Identifier(Titanium.MOD_ID, "deepslate_titanium_ore"), DEEPSLATE_TITANIUM_ORE);
-        Registry.register(Registries.ITEM, new Identifier(Titanium.MOD_ID, "deepslate_titanium_ore"), new BlockItem(DEEPSLATE_TITANIUM_ORE, new Item.Settings()));
         Registry.register(Registries.BLOCK, new Identifier(Titanium.MOD_ID, "end_titanium_ore"), END_TITANIUM_ORE);
-        Registry.register(Registries.ITEM, new Identifier(Titanium.MOD_ID, "end_titanium_ore"), new BlockItem(END_TITANIUM_ORE, new Item.Settings()));
         Registry.register(Registries.BLOCK, new Identifier(Titanium.MOD_ID, "raw_titanium_block"), RAW_TITANIUM_BLOCK);
-        Registry.register(Registries.ITEM, new Identifier(Titanium.MOD_ID, "raw_titanium_block"), new BlockItem(RAW_TITANIUM_BLOCK, new Item.Settings()));
         Registry.register(Registries.BLOCK, new Identifier(Titanium.MOD_ID, "titanium_block"), TITANIUM_BLOCK);
-        Registry.register(Registries.ITEM, new Identifier(Titanium.MOD_ID, "titanium_block"), new BlockItem(TITANIUM_BLOCK, new Item.Settings()));
         Registry.register(Registries.BLOCK, new Identifier(Titanium.MOD_ID, "titanium_lantern"), TITANIUM_LANTERN);
-        Registry.register(Registries.ITEM, new Identifier(Titanium.MOD_ID, "titanium_lantern"), new BlockItem(TITANIUM_LANTERN, new Item.Settings()));
     }
 }
