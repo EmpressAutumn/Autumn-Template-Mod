@@ -22,42 +22,36 @@ public class TestingWandItem extends Item {
         blocks.add("Block{minecraft:diamond_ore}");
         blocks.add("Block{minecraft:deepslate_diamond_ore}");
     }
-
     public List<String> blocks = new ArrayList<>();
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack itemStack = user.getStackInHand(hand);
-        user.getItemCooldownManager().set(this, 10);
-        if (!blocks.isEmpty()) {
-            List<Integer> count = new ArrayList<>();
-            for (int i = 0; i < blocks.size(); i++) {
-                count.add(0);
-            }
-            for (int x = user.getBlockX(); x < user.getBlockX() + 16.5; x++) {
-                for (int y = world.getBottomY(); y < world.getTopY(); y++) {
-                    for (int z = user.getBlockZ(); z < user.getBlockZ() + 16.5; z++) {
-                        boolean doBreak = true;
-                        for (int i = 0; i < blocks.size(); i++) {
-                            if (Objects.equals(world.getBlockState(new BlockPos(x, y, z)).getBlock().toString(), blocks.get(i))) {
-                                doBreak = false;
-                                count.set(i, count.get(i) + 1);
+        if (user.isInCreativeMode()) {
+            user.getItemCooldownManager().set(this, 10);
+            if (user.isSneaking() || blocks.isEmpty()) {
+            } else {
+                List<Integer> count = new ArrayList<>();
+                for (int i = 0; i < blocks.size(); i++) {
+                    count.add(0);
+                }
+                for (int x = user.getBlockX(); x < user.getBlockX() + 16; x++) {
+                    for (int y = world.getTopY() - 1; y >= world.getBottomY(); y--) {
+                        for (int z = user.getBlockZ(); z < user.getBlockZ() + 16; z++) {
+                            if (!blocks.contains(world.getBlockState(new BlockPos(x, y, z)).getBlock().toString())) {
+                                world.setBlockState(new BlockPos(x, y, z), Blocks.AIR.getDefaultState());
                             }
-                        }
-                        if (doBreak) {
-                            world.setBlockState(new BlockPos(x, y, z), Blocks.AIR.getDefaultState());
                         }
                     }
                 }
+                user.sendMessage(Text.of("Summary of Deleted Blocks:"));
+                for (int i = 0; i < blocks.size(); i++) {
+                    user.sendMessage(Text.of(count.get(i) + " blocks of " + blocks.get(i) + "."));
+                }
+                user.sendMessage(Text.of(""));
             }
-            user.sendMessage(Text.of("Summary of Deleted Blocks:"));
-            for (int i = 0; i < blocks.size(); i++) {
-                user.sendMessage(Text.of(count.get(i) + " blocks of " + blocks.get(i) + "."));
-            }
-            user.sendMessage(Text.of(""));
-        } else {
-
+            return TypedActionResult.success(itemStack);
         }
-        return TypedActionResult.success(itemStack);
+        return TypedActionResult.pass(itemStack);
     }
 }
