@@ -16,8 +16,8 @@
     "block.titanium.titanium_ore": "Titanium Ore",
     "block.titanium.deepslate_titanium_ore": "Deepslate Titanium Ore",
     "block.titanium.end_titanium_ore": "End Titanium Ore",
-    "block.titanium.raw_titanium_block": "Raw Titanium Block",
-    "block.titanium.titanium_block": "Titanium Block",
+    "block.titanium.raw_titanium_block": "Block of Raw Titanium",
+    "block.titanium.titanium_block": "Block of Titanium",
 
     "itemGroup.titanium.titanium_group": "Titanium",
 
