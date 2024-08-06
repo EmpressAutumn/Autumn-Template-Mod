@@ -1,0 +1,59 @@
+package com.atom596.titanium.item;
+
+import net.minecraft.core.Direction;
+import net.minecraft.core.Position;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.stats.Stats;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.projectile.Projectile;
+import net.minecraft.world.flag.FeatureFlagSet;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ProjectileItem;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.Vec3;
+
+public class FlightChargeItem extends Item implements ProjectileItem {
+    public FlightChargeItem(Item.Properties properties) {
+        super(properties);
+    }
+
+    @Override
+    public InteractionResultHolder<ItemStack> use(Level world, Player user, InteractionHand hand) {
+        world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.WIND_CHARGE_BURST.value(), SoundSource.NEUTRAL, 0.5f, 0.4f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
+        ItemStack itemStack = user.getItemInHand(hand);
+        if (user.getY() < world.getMinBuildHeight()) {
+            user.getCooldowns().addCooldown(this, 35);
+            user.travel(new Vec3(0, 4, 0));
+        } else {
+            user.getCooldowns().addCooldown(this, 20);
+            user.travel(new Vec3(0, 1.5, 0));
+        }
+        user.increaseScore(Stats.ITEM_USED.getRegistry().getId(this));
+        user.getItemInHand(hand).shrink(1);
+        return InteractionResultHolder.success(itemStack);
+    }
+
+    @Override
+    public Projectile asProjectile(Level level, Position position, ItemStack itemStack, Direction direction) {
+        return null;
+    }
+
+    @Override
+    public DispenseConfig createDispenseConfig() {
+        return ProjectileItem.super.createDispenseConfig();
+    }
+
+    @Override
+    public void shoot(Projectile $$0, double $$1, double $$2, double $$3, float $$4, float $$5) {
+        ProjectileItem.super.shoot($$0, $$1, $$2, $$3, $$4, $$5);
+    }
+
+    @Override
+    public boolean isEnabled(FeatureFlagSet $$0) {
+        return super.isEnabled($$0);
+    }
+}
