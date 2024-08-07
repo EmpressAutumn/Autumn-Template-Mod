@@ -6,7 +6,7 @@ import net.neoforged.fml.common.Mod;
 @Mod(Titanium.MOD_ID)
 public class TitaniumNeoforged {
     public TitaniumNeoforged(IEventBus eventBus) {
-        Titanium.LOGGER.info("Hello NeoForge world!");
-        Titanium.init();
+        Titanium.initialize();
+        Titanium.LOGGER.info("Initialized Titanium by EmpressAutumn");
     }
 }

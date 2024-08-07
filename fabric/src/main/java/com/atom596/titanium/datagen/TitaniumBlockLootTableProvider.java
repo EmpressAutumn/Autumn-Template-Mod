@@ -1,18 +1,26 @@
 package com.atom596.titanium.datagen;
 
-public class TitaniumBlockLootTableProvider /*extends FabricBlockLootTableProvider*/ {/*
-    public TitaniumBlockLootTableProvider(FabricDataOutput dataOutput, CompletableFuture<RegistryWrapper.WrapperLookup> completableFuture) {
-        super(dataOutput, completableFuture);
+import com.atom596.titanium.block.TitaniumBlocks;
+import com.atom596.titanium.item.TitaniumItems;
+import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
+import net.minecraft.core.HolderLookup;
+
+import java.util.concurrent.CompletableFuture;
+
+public class TitaniumBlockLootTableProvider extends FabricBlockLootTableProvider {
+    protected TitaniumBlockLootTableProvider(FabricDataOutput dataOutput, CompletableFuture<HolderLookup.Provider> registryLookup) {
+        super(dataOutput, registryLookup);
     }
 
     @Override
     public void generate() {
-        addDrop(TitaniumBlocks.TITANIUM_BLOCK);
-        addDrop(TitaniumBlocks.RAW_TITANIUM_BLOCK);
-        addDrop(TitaniumBlocks.TITANIUM_LANTERN);
+        createSelfDropDispatchTable(TitaniumBlocks.TITANIUM_BLOCK, null, null);
+        createSelfDropDispatchTable(TitaniumBlocks.RAW_TITANIUM_BLOCK, null, null);
+        createSelfDropDispatchTable(TitaniumBlocks.TITANIUM_LANTERN, null, null);
 
-        addDrop(TitaniumBlocks.TITANIUM_ORE, oreDrops(TitaniumBlocks.TITANIUM_ORE, TitaniumItems.RAW_TITANIUM));
-        addDrop(TitaniumBlocks.DEEPSLATE_TITANIUM_ORE, oreDrops(TitaniumBlocks.DEEPSLATE_TITANIUM_ORE, TitaniumItems.RAW_TITANIUM));
-        addDrop(TitaniumBlocks.END_TITANIUM_ORE, oreDrops(TitaniumBlocks.END_TITANIUM_ORE, TitaniumItems.RAW_TITANIUM));
+        createOreDrop(TitaniumBlocks.TITANIUM_ORE, TitaniumItems.RAW_TITANIUM);
+        createOreDrop(TitaniumBlocks.DEEPSLATE_TITANIUM_ORE, TitaniumItems.RAW_TITANIUM);
+        createOreDrop(TitaniumBlocks.END_TITANIUM_ORE, TitaniumItems.RAW_TITANIUM);
     }
-*/}
+}
