@@ -11,7 +11,7 @@ dependencies {
 sourceSets {
     main {
         resources {
-            srcDir("src/generated/resources")
+            srcDir(project(":common").file("src/main/generated"))
             exclude("**/.cache")
         }
     }
@@ -44,7 +44,7 @@ loom {
             name("Data Generation")
             property("fabric-api.datagen")
             property("fabric-api.datagen.modid", mod_id)
-            property("fabric-api.datagen.output-dir", project(":common").file("src/generated/resources").absolutePath)
+            property("fabric-api.datagen.output-dir", project(":common").file("src/main/generated").absolutePath)
             property("fabric-api.datagen.strict-validation")
             property("fabric-api.datagen.assets-dir", project(":common").file("src/main/resources/assets").absolutePath)
         }

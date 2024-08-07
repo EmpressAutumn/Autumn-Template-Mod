@@ -2,6 +2,8 @@ package com.atom596.titanium;
 
 import com.atom596.titanium.datagen.TitaniumAdvancementProvider;
 import com.atom596.titanium.datagen.TitaniumBlockLootTableProvider;
+import com.atom596.titanium.datagen.TitaniumBlockTagProvider;
+import com.atom596.titanium.datagen.TitaniumModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.core.RegistrySetBuilder;
@@ -13,7 +15,7 @@ public class TitaniumDataGenerator implements DataGeneratorEntrypoint {
 
 		pack.addProvider(TitaniumAdvancementProvider::new);
 		//pack.addProvider(TitaniumBlockLootTableProvider::new);
-		//pack.addProvider(TitaniumBlockTagProvider::new);
+		pack.addProvider(TitaniumBlockTagProvider::new);
 		//pack.addProvider(TitaniumChestLootTableProvider::new);
 		//pack.addProvider(TitaniumItemTagProvider::new);
 		//pack.addProvider(TitaniumModelProvider::new);
