@@ -12,7 +12,7 @@ public class Titanium {
 	public static final String MOD_ID = "titanium";
 	public static final org.slf4j.Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
-	public static void init() {
+	public static void initialize() {
 		TitaniumArmorMaterial.initialize();
 		TitaniumPotions.initialize();
 
@@ -22,6 +22,5 @@ public class Titanium {
 		TitaniumItemGroup.register();
 
 		//TitaniumWorldGeneration.generateModWorldGen();
-		LOGGER.info("Initialized Titanium by EmpressAutumn");
 	}
 }

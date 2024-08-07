@@ -6,7 +6,7 @@ public class TitaniumFabric implements ModInitializer {
     
     @Override
     public void onInitialize() {
-        Titanium.LOGGER.info("Hello Fabric world!");
-        Titanium.init();
+        Titanium.initialize();
+        Titanium.LOGGER.info("Initialized Titanium by EmpressAutumn");
     }
 }
