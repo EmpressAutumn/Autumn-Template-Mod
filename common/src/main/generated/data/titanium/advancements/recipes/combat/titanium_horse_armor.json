@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "titanium:titanium_horse_armor"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "titanium_horse_armor": {
+      "conditions": {
+        "items": [
+          {
+            "items": "titanium:titanium_ingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "titanium_horse_armor"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "titanium:titanium_horse_armor"
+    ]
+  }
+}

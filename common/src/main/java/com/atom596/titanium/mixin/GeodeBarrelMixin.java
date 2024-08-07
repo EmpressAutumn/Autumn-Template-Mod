@@ -22,7 +22,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public class GeodeBarrelMixin {
 	@Inject(at = @At("RETURN"), method = "place")
 	private void gen_barrel(FeaturePlaceContext<GeodeConfiguration> context, CallbackInfoReturnable<Boolean> cir) {
-		WorldGenLevel structureWorldAccess = context.level();
+		/*WorldGenLevel structureWorldAccess = context.level();
 		RandomSource random = context.random();
 		int radius = context.config().outerWallDistance.sample(random);
 
@@ -34,6 +34,6 @@ public class GeodeBarrelMixin {
 		}
 
 		structureWorldAccess.setBlock(barrelPos, Blocks.BARREL.defaultBlockState(), Block.UPDATE_CLIENTS);
-		((ChestBlockEntity) structureWorldAccess.getBlockEntity(barrelPos)).setLootTable(ResourceKey.create(Registries.LOOT_TABLE, new ResourceLocation(Titanium.MOD_ID, "chests/amethyst_barrel")));
+		((ChestBlockEntity) structureWorldAccess.getBlockEntity(barrelPos)).setLootTable(ResourceKey.create(Registries.LOOT_TABLE, new ResourceLocation(Titanium.MOD_ID, "chests/amethyst_barrel")));*/
 	}
 }

@@ -15,11 +15,11 @@ public class TitaniumModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockModelGenerators blockStateModelGenerator) {
-        blockStateModelGenerator.createGenericCube(TitaniumBlocks.TITANIUM_ORE);
-        blockStateModelGenerator.createGenericCube(TitaniumBlocks.DEEPSLATE_TITANIUM_ORE);
-        blockStateModelGenerator.createGenericCube(TitaniumBlocks.END_TITANIUM_ORE);
-        blockStateModelGenerator.createGenericCube(TitaniumBlocks.RAW_TITANIUM_BLOCK);
-        blockStateModelGenerator.createGenericCube(TitaniumBlocks.TITANIUM_BLOCK);
+        blockStateModelGenerator.createTrivialCube(TitaniumBlocks.TITANIUM_ORE);
+        blockStateModelGenerator.createTrivialCube(TitaniumBlocks.DEEPSLATE_TITANIUM_ORE);
+        blockStateModelGenerator.createTrivialCube(TitaniumBlocks.END_TITANIUM_ORE);
+        blockStateModelGenerator.createTrivialCube(TitaniumBlocks.RAW_TITANIUM_BLOCK);
+        blockStateModelGenerator.createTrivialCube(TitaniumBlocks.TITANIUM_BLOCK);
     }
 
     @Override
@@ -35,7 +35,7 @@ public class TitaniumModelProvider extends FabricModelProvider {
         itemModelGenerator.generateFlatItem(TitaniumItems.TITANIUM_HORSE_ARMOR, ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(TitaniumItems.END_POWDER, ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(TitaniumItems.FLIGHT_CHARGE, ModelTemplates.FLAT_ITEM);
-        itemModelGenerator.generateFlatItem(TitaniumItems.TITANIUM_LANTERN, ModelTemplates.FLAT_ITEM);
+        //itemModelGenerator.generateFlatItem(TitaniumItems.TITANIUM_LANTERN, ModelTemplates.FLAT_ITEM);
 
         itemModelGenerator.generateFlatItem(TitaniumItems.TITANIUM_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerator.generateFlatItem(TitaniumItems.TITANIUM_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);

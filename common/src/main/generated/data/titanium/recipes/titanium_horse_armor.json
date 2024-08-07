@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "I": {
+      "item": "titanium:titanium_ingot"
+    },
+    "L": {
+      "item": "minecraft:leather"
+    },
+    "N": {
+      "item": "titanium:titanium_nugget"
+    }
+  },
+  "pattern": [
+    "NLN",
+    "IIN"
+  ],
+  "result": {
+    "count": 1,
+    "id": "titanium:titanium_horse_armor"
+  }
+}

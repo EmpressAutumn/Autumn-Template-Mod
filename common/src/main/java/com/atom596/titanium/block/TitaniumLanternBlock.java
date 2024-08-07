@@ -13,7 +13,7 @@ import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.material.PushReaction;
 import net.minecraft.world.phys.BlockHitResult;
 
-public class TitaniumLanternBlock extends LanternBlock {
+public class TitaniumLanternBlock /*extends LanternBlock*/ {/*
     public TitaniumLanternBlock() {
         super(Properties.of()
                 .forceSolidOn()
@@ -49,4 +49,4 @@ public class TitaniumLanternBlock extends LanternBlock {
         super.createBlockStateDefinition(builder);
         builder.add(LIT);
     }
-}
+*/}

@@ -28,8 +28,8 @@ public class TitaniumBlockTagProvider extends BlockTagProvider {
                 .add(TitaniumBlocks.DEEPSLATE_TITANIUM_ORE)
                 .add(TitaniumBlocks.END_TITANIUM_ORE)
                 .add(TitaniumBlocks.RAW_TITANIUM_BLOCK)
-                .add(TitaniumBlocks.TITANIUM_BLOCK)
-                .add(TitaniumBlocks.TITANIUM_LANTERN);
+                .add(TitaniumBlocks.TITANIUM_BLOCK);
+                //.add(TitaniumBlocks.TITANIUM_LANTERN);
 
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(TitaniumBlocks.TITANIUM_ORE)

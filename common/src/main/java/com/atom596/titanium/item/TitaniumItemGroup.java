@@ -19,7 +19,7 @@ public class TitaniumItemGroup {
                 entries.accept(TitaniumBlocks.DEEPSLATE_TITANIUM_ORE);
                 entries.accept(TitaniumBlocks.END_TITANIUM_ORE);
                 entries.accept(TitaniumBlocks.RAW_TITANIUM_BLOCK);
-                entries.accept(TitaniumBlocks.TITANIUM_LANTERN);
+                //entries.accept(TitaniumBlocks.TITANIUM_LANTERN);
                 entries.accept(TitaniumItems.TITANIUM_SHOVEL);
                 entries.accept(TitaniumItems.TITANIUM_PICKAXE);
                 entries.accept(TitaniumItems.TITANIUM_AXE);

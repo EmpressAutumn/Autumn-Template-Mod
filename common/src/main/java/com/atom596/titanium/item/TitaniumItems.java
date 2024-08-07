@@ -31,7 +31,7 @@ public class TitaniumItems {
     public static final Item END_TITANIUM_ORE = new BlockItem(TitaniumBlocks.END_TITANIUM_ORE, new Item.Properties());
     public static final Item RAW_TITANIUM_BLOCK = new BlockItem(TitaniumBlocks.RAW_TITANIUM_BLOCK, new Item.Properties());
     public static final Item TITANIUM_BLOCK = new BlockItem(TitaniumBlocks.TITANIUM_BLOCK, new Item.Properties());
-    public static final Item TITANIUM_LANTERN = new BlockItem(TitaniumBlocks.TITANIUM_LANTERN, new Item.Properties());
+    //public static final Item TITANIUM_LANTERN = new BlockItem(TitaniumBlocks.TITANIUM_LANTERN, new Item.Properties());
 
     public static void register() {
         Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Titanium.MOD_ID, "titanium_helmet"), TITANIUM_HELMET);
@@ -57,6 +57,6 @@ public class TitaniumItems {
         Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Titanium.MOD_ID, "end_titanium_ore"), END_TITANIUM_ORE);
         Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Titanium.MOD_ID, "raw_titanium_block"), RAW_TITANIUM_BLOCK);
         Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Titanium.MOD_ID, "titanium_block"), TITANIUM_BLOCK);
-        Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Titanium.MOD_ID, "titanium_lantern"), TITANIUM_LANTERN);
+        //Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Titanium.MOD_ID, "titanium_lantern"), TITANIUM_LANTERN);
     }
 }
