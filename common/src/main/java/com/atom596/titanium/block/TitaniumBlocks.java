@@ -1,6 +1,5 @@
 package com.atom596.titanium.block;
 
-
 import com.atom596.titanium.Titanium;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;

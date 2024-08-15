@@ -27,13 +27,15 @@ public class FlightChargeItem extends Item implements ProjectileItem {
         ItemStack itemStack = user.getItemInHand(hand);
         if (user.getY() < world.getMinBuildHeight()) {
             user.getCooldowns().addCooldown(this, 35);
-            user.travel(new Vec3(0, 4, 0));
+            user.setDeltaMovement(user.getDeltaMovement().add(new Vec3(0, 4, 0)));
         } else {
             user.getCooldowns().addCooldown(this, 20);
-            user.travel(new Vec3(0, 1.5, 0));
+            user.setDeltaMovement(user.getDeltaMovement().add(new Vec3(0, 1.5, 0)));
         }
         user.increaseScore(Stats.ITEM_USED.getRegistry().getId(this));
-        user.getItemInHand(hand).shrink(1);
+        if (!user.isCreative()) {
+            user.getItemInHand(hand).shrink(1);
+        }
         return InteractionResultHolder.success(itemStack);
     }
 
