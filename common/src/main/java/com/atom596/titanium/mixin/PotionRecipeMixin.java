@@ -14,7 +14,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class PotionRecipeMixin {
     @Inject(at = @At("TAIL"), method = "addVanillaMixes")
     private static void registerPotionRecipes(PotionBrewing.Builder builder, CallbackInfo ci) {
-        builder.addMix(Potions.MUNDANE, TitaniumItems.END_POWDER, TitaniumPotions.LEVITATION);
-        builder.addMix(TitaniumPotions.LEVITATION, Items.REDSTONE, TitaniumPotions.LONG_LEVITATION);
+        //builder.addMix(Potions.MUNDANE, TitaniumItems.END_POWDER, TitaniumPotions.LEVITATION);
+        //builder.addMix(TitaniumPotions.LEVITATION, Items.REDSTONE, TitaniumPotions.LONG_LEVITATION);
     }
 }

@@ -6,8 +6,7 @@
   "compatibilityLevel": "JAVA_21",
   "mixins": [],
   "client": [
-    "GeodeBarrelMixin",
-    "PotionRecipeMixin"
+    "GeodeBarrelMixin"
   ],
   "server": [],
   "injectors": {
