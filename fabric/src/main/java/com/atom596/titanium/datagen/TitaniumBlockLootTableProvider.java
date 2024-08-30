@@ -15,12 +15,12 @@ public class TitaniumBlockLootTableProvider extends FabricBlockLootTableProvider
 
     @Override
     public void generate() {
-        createSelfDropDispatchTable(TitaniumBlocks.TITANIUM_BLOCK, null, null);
-        createSelfDropDispatchTable(TitaniumBlocks.RAW_TITANIUM_BLOCK, null, null);
-        //createSelfDropDispatchTable(TitaniumBlocks.TITANIUM_LANTERN, null, null);
+        createSelfDropDispatchTable(TitaniumBlocks.TITANIUM_BLOCK.get(), null, null);
+        createSelfDropDispatchTable(TitaniumBlocks.RAW_TITANIUM_BLOCK.get(), null, null);
+        //createSelfDropDispatchTable(TitaniumBlocks.TITANIUM_LANTERN.get(), null, null);
 
-        createOreDrop(TitaniumBlocks.TITANIUM_ORE, TitaniumItems.RAW_TITANIUM);
-        createOreDrop(TitaniumBlocks.DEEPSLATE_TITANIUM_ORE, TitaniumItems.RAW_TITANIUM);
-        createOreDrop(TitaniumBlocks.END_TITANIUM_ORE, TitaniumItems.RAW_TITANIUM);
+        createOreDrop(TitaniumBlocks.TITANIUM_ORE.get(), TitaniumItems.RAW_TITANIUM.get());
+        createOreDrop(TitaniumBlocks.DEEPSLATE_TITANIUM_ORE.get(), TitaniumItems.RAW_TITANIUM.get());
+        createOreDrop(TitaniumBlocks.END_TITANIUM_ORE.get(), TitaniumItems.RAW_TITANIUM.get());
     }
 }

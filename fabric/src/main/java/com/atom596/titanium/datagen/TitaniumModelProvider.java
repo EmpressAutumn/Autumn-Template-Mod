@@ -15,33 +15,33 @@ public class TitaniumModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockModelGenerators blockStateModelGenerator) {
-        blockStateModelGenerator.createTrivialCube(TitaniumBlocks.TITANIUM_ORE);
-        blockStateModelGenerator.createTrivialCube(TitaniumBlocks.DEEPSLATE_TITANIUM_ORE);
-        blockStateModelGenerator.createTrivialCube(TitaniumBlocks.END_TITANIUM_ORE);
-        blockStateModelGenerator.createTrivialCube(TitaniumBlocks.RAW_TITANIUM_BLOCK);
-        blockStateModelGenerator.createTrivialCube(TitaniumBlocks.TITANIUM_BLOCK);
+        blockStateModelGenerator.createTrivialCube(TitaniumBlocks.TITANIUM_ORE.get());
+        blockStateModelGenerator.createTrivialCube(TitaniumBlocks.DEEPSLATE_TITANIUM_ORE.get());
+        blockStateModelGenerator.createTrivialCube(TitaniumBlocks.END_TITANIUM_ORE.get());
+        blockStateModelGenerator.createTrivialCube(TitaniumBlocks.RAW_TITANIUM_BLOCK.get());
+        blockStateModelGenerator.createTrivialCube(TitaniumBlocks.TITANIUM_BLOCK.get());
     }
 
     @Override
     public void generateItemModels(ItemModelGenerators itemModelGenerator) {
-        itemModelGenerator.generateFlatItem(TitaniumItems.TITANIUM_HELMET, ModelTemplates.FLAT_ITEM);
-        itemModelGenerator.generateFlatItem(TitaniumItems.TITANIUM_CHESTPLATE, ModelTemplates.FLAT_ITEM);
-        itemModelGenerator.generateFlatItem(TitaniumItems.TITANIUM_LEGGINGS, ModelTemplates.FLAT_ITEM);
-        itemModelGenerator.generateFlatItem(TitaniumItems.TITANIUM_BOOTS, ModelTemplates.FLAT_ITEM);
-        itemModelGenerator.generateFlatItem(TitaniumItems.RAW_TITANIUM, ModelTemplates.FLAT_ITEM);
-        itemModelGenerator.generateFlatItem(TitaniumItems.TITANIUM_NUGGET, ModelTemplates.FLAT_ITEM);
-        itemModelGenerator.generateFlatItem(TitaniumItems.TITANIUM_INGOT, ModelTemplates.FLAT_ITEM);
-        //itemModelGenerator.generateFlatItem(TitaniumItems.MUSIC_DISC_AMETHYST, ModelTemplates.FLAT_ITEM);
-        itemModelGenerator.generateFlatItem(TitaniumItems.TITANIUM_HORSE_ARMOR, ModelTemplates.FLAT_ITEM);
-        itemModelGenerator.generateFlatItem(TitaniumItems.END_POWDER, ModelTemplates.FLAT_ITEM);
-        itemModelGenerator.generateFlatItem(TitaniumItems.FLIGHT_CHARGE, ModelTemplates.FLAT_ITEM);
-        //itemModelGenerator.generateFlatItem(TitaniumItems.TITANIUM_LANTERN, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(TitaniumItems.TITANIUM_HELMET.get(), ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(TitaniumItems.TITANIUM_CHESTPLATE.get(), ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(TitaniumItems.TITANIUM_LEGGINGS.get(), ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(TitaniumItems.TITANIUM_BOOTS.get(), ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(TitaniumItems.RAW_TITANIUM.get(), ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(TitaniumItems.TITANIUM_NUGGET.get(), ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(TitaniumItems.TITANIUM_INGOT.get(), ModelTemplates.FLAT_ITEM);
+        //itemModelGenerator.generateFlatItem(TitaniumItems.MUSIC_DISC_AMETHYST.get(), ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(TitaniumItems.TITANIUM_HORSE_ARMOR.get(), ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(TitaniumItems.END_POWDER.get(), ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(TitaniumItems.FLIGHT_CHARGE.get(), ModelTemplates.FLAT_ITEM);
+        //itemModelGenerator.generateFlatItem(TitaniumItems.TITANIUM_LANTERN.get(), ModelTemplates.FLAT_ITEM);
 
-        itemModelGenerator.generateFlatItem(TitaniumItems.TITANIUM_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
-        itemModelGenerator.generateFlatItem(TitaniumItems.TITANIUM_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
-        itemModelGenerator.generateFlatItem(TitaniumItems.TITANIUM_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
-        itemModelGenerator.generateFlatItem(TitaniumItems.TITANIUM_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
-        itemModelGenerator.generateFlatItem(TitaniumItems.TITANIUM_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
-        itemModelGenerator.generateFlatItem(TitaniumItems.TESTING_WAND, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(TitaniumItems.TITANIUM_SHOVEL.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(TitaniumItems.TITANIUM_SWORD.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(TitaniumItems.TITANIUM_PICKAXE.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(TitaniumItems.TITANIUM_AXE.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(TitaniumItems.TITANIUM_HOE.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(TitaniumItems.TESTING_WAND.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
     }
 }

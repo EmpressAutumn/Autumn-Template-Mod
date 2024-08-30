@@ -34,8 +34,8 @@ public class TitaniumItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item, Item> TITANIUM_INGOT = ITEMS.register("titanium_ingot",
             () -> new Item(new Item.Properties()));
-    //public static final RegistryObject<Item, TitaniumRecordItem> MUSIC_DISC_AMETHYST = ITEMS.register("music_disc_amethyst",
-            //() -> new TitaniumRecordItem());
+    public static final RegistryObject<Item, TitaniumRecordItem> MUSIC_DISC_AMETHYST = ITEMS.register("music_disc_amethyst",
+            TitaniumRecordItem::new);
     public static final RegistryObject<Item, AnimalArmorItem> TITANIUM_HORSE_ARMOR = ITEMS.register("titanium_horse_armor",
             () -> new AnimalArmorItem(TitaniumArmorMaterial.INSTANCE.asHolder(), AnimalArmorItem.BodyType.EQUESTRIAN, false, new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item, Item> END_POWDER = ITEMS.register("end_powder",

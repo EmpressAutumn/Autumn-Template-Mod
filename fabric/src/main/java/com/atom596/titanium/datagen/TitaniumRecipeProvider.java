@@ -18,10 +18,10 @@ import java.util.concurrent.CompletableFuture;
 
 public class TitaniumRecipeProvider extends FabricRecipeProvider {
     private static final List<ItemLike> TITANIUM_SMELTABLES = List.of(
-            TitaniumItems.RAW_TITANIUM,
-            TitaniumBlocks.TITANIUM_ORE,
-            TitaniumBlocks.DEEPSLATE_TITANIUM_ORE,
-            TitaniumBlocks.END_TITANIUM_ORE
+            TitaniumItems.RAW_TITANIUM.get(),
+            TitaniumBlocks.TITANIUM_ORE.get(),
+            TitaniumBlocks.DEEPSLATE_TITANIUM_ORE.get(),
+            TitaniumBlocks.END_TITANIUM_ORE.get()
     );
 
     public TitaniumRecipeProvider(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> registriesFuture) {
@@ -30,136 +30,136 @@ public class TitaniumRecipeProvider extends FabricRecipeProvider {
 
     @Override
     public void buildRecipes(RecipeOutput exporter) {
-        oreSmelting(exporter, TITANIUM_SMELTABLES, RecipeCategory.MISC, TitaniumItems.TITANIUM_INGOT,
+        oreSmelting(exporter, TITANIUM_SMELTABLES, RecipeCategory.MISC, TitaniumItems.TITANIUM_INGOT.get(),
                 0.1f, 200, "titanium");
-        oreBlasting(exporter, TITANIUM_SMELTABLES, RecipeCategory.MISC, TitaniumItems.TITANIUM_INGOT,
+        oreBlasting(exporter, TITANIUM_SMELTABLES, RecipeCategory.MISC, TitaniumItems.TITANIUM_INGOT.get(),
                 0.1f, 100, "titanium");
 
-        nineBlockStorageRecipes(exporter, RecipeCategory.MISC, TitaniumItems.TITANIUM_INGOT,
-                RecipeCategory.BUILDING_BLOCKS, TitaniumBlocks.TITANIUM_BLOCK);
-        nineBlockStorageRecipes(exporter, RecipeCategory.MISC, TitaniumItems.RAW_TITANIUM,
-                RecipeCategory.BUILDING_BLOCKS, TitaniumBlocks.RAW_TITANIUM_BLOCK);
+        nineBlockStorageRecipes(exporter, RecipeCategory.MISC, TitaniumItems.TITANIUM_INGOT.get(),
+                RecipeCategory.BUILDING_BLOCKS, TitaniumBlocks.TITANIUM_BLOCK.get());
+        nineBlockStorageRecipes(exporter, RecipeCategory.MISC, TitaniumItems.RAW_TITANIUM.get(),
+                RecipeCategory.BUILDING_BLOCKS, TitaniumBlocks.RAW_TITANIUM_BLOCK.get());
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, TitaniumItems.TITANIUM_INGOT, 1)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, TitaniumItems.TITANIUM_INGOT.get(), 1)
                 .pattern("TTT")
                 .pattern("TTT")
                 .pattern("TTT")
-                .define('T', TitaniumItems.TITANIUM_NUGGET)
-                .unlockedBy("titanium_nugget_from_ingot", has(TitaniumItems.TITANIUM_NUGGET))
+                .define('T', TitaniumItems.TITANIUM_NUGGET.get())
+                .unlockedBy("titanium_nugget_from_ingot", has(TitaniumItems.TITANIUM_NUGGET.get()))
                 .save(exporter, new ResourceLocation(Titanium.MOD_ID, "titanium_nugget_from_ingot"));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, TitaniumItems.TITANIUM_NUGGET, 9)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, TitaniumItems.TITANIUM_NUGGET.get(), 9)
                 .pattern("T")
-                .define('T', TitaniumItems.TITANIUM_INGOT)
-                .unlockedBy("titanium_ingot_from_nugget", has(TitaniumItems.TITANIUM_INGOT))
+                .define('T', TitaniumItems.TITANIUM_INGOT.get())
+                .unlockedBy("titanium_ingot_from_nugget", has(TitaniumItems.TITANIUM_INGOT.get()))
                 .save(exporter, new ResourceLocation(Titanium.MOD_ID, "titanium_ingot_from_nugget"));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, TitaniumItems.TITANIUM_HELMET, 1)
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, TitaniumItems.TITANIUM_HELMET.get(), 1)
                 .pattern("TTT")
                 .pattern("T T")
-                .define('T', TitaniumItems.TITANIUM_INGOT)
-                .unlockedBy(getItemName(TitaniumItems.TITANIUM_HELMET), has(TitaniumItems.TITANIUM_INGOT))
-                .save(exporter, new ResourceLocation(Titanium.MOD_ID, getItemName(TitaniumItems.TITANIUM_HELMET)));
+                .define('T', TitaniumItems.TITANIUM_INGOT.get())
+                .unlockedBy(getItemName(TitaniumItems.TITANIUM_HELMET.get()), has(TitaniumItems.TITANIUM_INGOT.get()))
+                .save(exporter, new ResourceLocation(Titanium.MOD_ID, getItemName(TitaniumItems.TITANIUM_HELMET.get())));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, TitaniumItems.TITANIUM_CHESTPLATE, 1)
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, TitaniumItems.TITANIUM_CHESTPLATE.get(), 1)
                 .pattern("T T")
                 .pattern("TTT")
                 .pattern("TTT")
-                .define('T', TitaniumItems.TITANIUM_INGOT)
-                .unlockedBy(getItemName(TitaniumItems.TITANIUM_CHESTPLATE), has(TitaniumItems.TITANIUM_INGOT))
-                .save(exporter, new ResourceLocation(Titanium.MOD_ID, getItemName(TitaniumItems.TITANIUM_CHESTPLATE)));
+                .define('T', TitaniumItems.TITANIUM_INGOT.get())
+                .unlockedBy(getItemName(TitaniumItems.TITANIUM_CHESTPLATE.get()), has(TitaniumItems.TITANIUM_INGOT.get()))
+                .save(exporter, new ResourceLocation(Titanium.MOD_ID, getItemName(TitaniumItems.TITANIUM_CHESTPLATE.get())));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, TitaniumItems.TITANIUM_LEGGINGS, 1)
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, TitaniumItems.TITANIUM_LEGGINGS.get(), 1)
                 .pattern("TTT")
                 .pattern("T T")
                 .pattern("T T")
-                .define('T', TitaniumItems.TITANIUM_INGOT)
-                .unlockedBy(getItemName(TitaniumItems.TITANIUM_LEGGINGS), has(TitaniumItems.TITANIUM_INGOT))
-                .save(exporter, new ResourceLocation(Titanium.MOD_ID, getItemName(TitaniumItems.TITANIUM_LEGGINGS)));
+                .define('T', TitaniumItems.TITANIUM_INGOT.get())
+                .unlockedBy(getItemName(TitaniumItems.TITANIUM_LEGGINGS.get()), has(TitaniumItems.TITANIUM_INGOT.get()))
+                .save(exporter, new ResourceLocation(Titanium.MOD_ID, getItemName(TitaniumItems.TITANIUM_LEGGINGS.get())));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, TitaniumItems.TITANIUM_BOOTS, 1)
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, TitaniumItems.TITANIUM_BOOTS.get(), 1)
                 .pattern("T T")
                 .pattern("T T")
-                .define('T', TitaniumItems.TITANIUM_INGOT)
-                .unlockedBy(getItemName(TitaniumItems.TITANIUM_BOOTS), has(TitaniumItems.TITANIUM_INGOT))
-                .save(exporter, new ResourceLocation(Titanium.MOD_ID, getItemName(TitaniumItems.TITANIUM_BOOTS)));
+                .define('T', TitaniumItems.TITANIUM_INGOT.get())
+                .unlockedBy(getItemName(TitaniumItems.TITANIUM_BOOTS.get()), has(TitaniumItems.TITANIUM_INGOT.get()))
+                .save(exporter, new ResourceLocation(Titanium.MOD_ID, getItemName(TitaniumItems.TITANIUM_BOOTS.get())));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, TitaniumItems.TITANIUM_SWORD, 1)
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, TitaniumItems.TITANIUM_SWORD.get(), 1)
                 .pattern("T")
                 .pattern("T")
                 .pattern("S")
-                .define('T', TitaniumItems.TITANIUM_INGOT)
+                .define('T', TitaniumItems.TITANIUM_INGOT.get())
                 .define('S', Items.STICK)
-                .unlockedBy(getItemName(TitaniumItems.TITANIUM_SWORD), has(TitaniumItems.TITANIUM_INGOT))
-                .save(exporter, new ResourceLocation(Titanium.MOD_ID, getItemName(TitaniumItems.TITANIUM_SWORD)));
+                .unlockedBy(getItemName(TitaniumItems.TITANIUM_SWORD.get()), has(TitaniumItems.TITANIUM_INGOT.get()))
+                .save(exporter, new ResourceLocation(Titanium.MOD_ID, getItemName(TitaniumItems.TITANIUM_SWORD.get())));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, TitaniumItems.TITANIUM_PICKAXE, 1)
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, TitaniumItems.TITANIUM_PICKAXE.get(), 1)
                 .pattern("TTT")
                 .pattern(" S ")
                 .pattern(" S ")
-                .define('T', TitaniumItems.TITANIUM_INGOT)
+                .define('T', TitaniumItems.TITANIUM_INGOT.get())
                 .define('S', Items.STICK)
-                .unlockedBy(getItemName(TitaniumItems.TITANIUM_PICKAXE), has(TitaniumItems.TITANIUM_INGOT))
-                .save(exporter, new ResourceLocation(Titanium.MOD_ID, getItemName(TitaniumItems.TITANIUM_PICKAXE)));
+                .unlockedBy(getItemName(TitaniumItems.TITANIUM_PICKAXE.get()), has(TitaniumItems.TITANIUM_INGOT.get()))
+                .save(exporter, new ResourceLocation(Titanium.MOD_ID, getItemName(TitaniumItems.TITANIUM_PICKAXE.get())));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, TitaniumItems.TITANIUM_SHOVEL, 1)
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, TitaniumItems.TITANIUM_SHOVEL.get(), 1)
                 .pattern("T")
                 .pattern("S")
                 .pattern("S")
-                .define('T', TitaniumItems.TITANIUM_INGOT)
+                .define('T', TitaniumItems.TITANIUM_INGOT.get())
                 .define('S', Items.STICK)
-                .unlockedBy(getItemName(TitaniumItems.TITANIUM_SHOVEL), has(TitaniumItems.TITANIUM_INGOT))
-                .save(exporter, new ResourceLocation(Titanium.MOD_ID, getItemName(TitaniumItems.TITANIUM_SHOVEL)));
+                .unlockedBy(getItemName(TitaniumItems.TITANIUM_SHOVEL.get()), has(TitaniumItems.TITANIUM_INGOT.get()))
+                .save(exporter, new ResourceLocation(Titanium.MOD_ID, getItemName(TitaniumItems.TITANIUM_SHOVEL.get())));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, TitaniumItems.TITANIUM_AXE, 1)
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, TitaniumItems.TITANIUM_AXE.get(), 1)
                 .pattern("TT")
                 .pattern("TS")
                 .pattern(" S")
-                .define('T', TitaniumItems.TITANIUM_INGOT)
+                .define('T', TitaniumItems.TITANIUM_INGOT.get())
                 .define('S', Items.STICK)
-                .unlockedBy(getItemName(TitaniumItems.TITANIUM_AXE), has(TitaniumItems.TITANIUM_INGOT))
-                .save(exporter, new ResourceLocation(Titanium.MOD_ID, getItemName(TitaniumItems.TITANIUM_AXE)));
+                .unlockedBy(getItemName(TitaniumItems.TITANIUM_AXE.get()), has(TitaniumItems.TITANIUM_INGOT.get()))
+                .save(exporter, new ResourceLocation(Titanium.MOD_ID, getItemName(TitaniumItems.TITANIUM_AXE.get())));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, TitaniumItems.TITANIUM_HOE, 1)
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, TitaniumItems.TITANIUM_HOE.get(), 1)
                 .pattern("TT")
                 .pattern(" S")
                 .pattern(" S")
-                .define('T', TitaniumItems.TITANIUM_INGOT)
+                .define('T', TitaniumItems.TITANIUM_INGOT.get())
                 .define('S', Items.STICK)
-                .unlockedBy(getItemName(TitaniumItems.TITANIUM_HOE), has(TitaniumItems.TITANIUM_INGOT))
-                .save(exporter, new ResourceLocation(Titanium.MOD_ID, getItemName(TitaniumItems.TITANIUM_HOE)));
+                .unlockedBy(getItemName(TitaniumItems.TITANIUM_HOE.get()), has(TitaniumItems.TITANIUM_INGOT.get()))
+                .save(exporter, new ResourceLocation(Titanium.MOD_ID, getItemName(TitaniumItems.TITANIUM_HOE.get())));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, TitaniumItems.TITANIUM_HORSE_ARMOR, 1)
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, TitaniumItems.TITANIUM_HORSE_ARMOR.get(), 1)
                 .pattern("NLN")
                 .pattern("IIN")
-                .define('I', TitaniumItems.TITANIUM_INGOT)
-                .define('N', TitaniumItems.TITANIUM_NUGGET)
+                .define('I', TitaniumItems.TITANIUM_INGOT.get())
+                .define('N', TitaniumItems.TITANIUM_NUGGET.get())
                 .define('L', Items.LEATHER)
-                .unlockedBy(getItemName(TitaniumItems.TITANIUM_HORSE_ARMOR), has(TitaniumItems.TITANIUM_INGOT))
-                .save(exporter, new ResourceLocation(Titanium.MOD_ID, getItemName(TitaniumItems.TITANIUM_HORSE_ARMOR)));
+                .unlockedBy(getItemName(TitaniumItems.TITANIUM_HORSE_ARMOR.get()), has(TitaniumItems.TITANIUM_INGOT.get()))
+                .save(exporter, new ResourceLocation(Titanium.MOD_ID, getItemName(TitaniumItems.TITANIUM_HORSE_ARMOR.get())));
 
-        /*ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, TitaniumBlocks.TITANIUM_LANTERN, 1)
+        /*ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, TitaniumBlocks.TITANIUM_LANTERN.get(), 1)
                 .pattern("NNN")
                 .pattern("NTN")
                 .pattern("NNN")
-                .input('N', TitaniumItems.TITANIUM_NUGGET)
+                .input('N', TitaniumItems.TITANIUM_NUGGET.get())
                 .input('T', Items.REDSTONE_TORCH)
-                .unlockedBy(getItemName(TitaniumItems.TITANIUM_LANTERN), has(TitaniumItems.TITANIUM_NUGGET))
-                .save(exporter, new ResourceLocation(Titanium.MOD_ID, getItemName(TitaniumItems.TITANIUM_LANTERN)));*/
+                .unlockedBy(getItemName(TitaniumItems.TITANIUM_LANTERN.get()), has(TitaniumItems.TITANIUM_NUGGET.get()))
+                .save(exporter, new ResourceLocation(Titanium.MOD_ID, getItemName(TitaniumItems.TITANIUM_LANTERN.get())));*/
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, TitaniumItems.END_POWDER, 2)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, TitaniumItems.END_POWDER.get(), 2)
                 .pattern("T")
                 .define('T', Items.ENDER_PEARL)
-                .unlockedBy(getItemName(TitaniumItems.END_POWDER), has(Items.ENDER_PEARL))
-                .save(exporter, new ResourceLocation(Titanium.MOD_ID, getItemName(TitaniumItems.END_POWDER)));
+                .unlockedBy(getItemName(TitaniumItems.END_POWDER.get()), has(Items.ENDER_PEARL))
+                .save(exporter, new ResourceLocation(Titanium.MOD_ID, getItemName(TitaniumItems.END_POWDER.get())));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, TitaniumItems.FLIGHT_CHARGE, 1)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, TitaniumItems.FLIGHT_CHARGE.get(), 1)
                 .pattern("TTT")
                 .pattern("TST")
                 .pattern("TTT")
-                .define('T', TitaniumItems.TITANIUM_NUGGET)
-                .define('S', TitaniumItems.END_POWDER)
-                .unlockedBy(getItemName(TitaniumItems.FLIGHT_CHARGE), has(TitaniumItems.END_POWDER))
-                .save(exporter, new ResourceLocation(Titanium.MOD_ID, getItemName(TitaniumItems.FLIGHT_CHARGE)));
+                .define('T', TitaniumItems.TITANIUM_NUGGET.get())
+                .define('S', TitaniumItems.END_POWDER.get())
+                .unlockedBy(getItemName(TitaniumItems.FLIGHT_CHARGE.get()), has(TitaniumItems.END_POWDER.get()))
+                .save(exporter, new ResourceLocation(Titanium.MOD_ID, getItemName(TitaniumItems.FLIGHT_CHARGE.get())));
     }
 }

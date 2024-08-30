@@ -16,22 +16,22 @@ public class TitaniumBlockTagProvider extends BlockTagProvider {
     @Override
     protected void addTags(HolderLookup.Provider wrapperLookup) {
         /*getOrCreateTagBuilder(TagKey.create(ResourceKey.BLOCK, new ResourceLocation(Titanium.MOD_ID, "titanium_ores")))
-                .add(TitaniumBlocks.TITANIUM_ORE)
-                .add(TitaniumBlocks.TITANIUM_BLOCK)
-                .add(TitaniumBlocks.END_TITANIUM_ORE);*/
+                .add(TitaniumBlocks.TITANIUM_ORE.get())
+                .add(TitaniumBlocks.TITANIUM_BLOCK.get())
+                .add(TitaniumBlocks.END_TITANIUM_ORE.get());*/
         getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
-                .add(TitaniumBlocks.TITANIUM_ORE)
-                .add(TitaniumBlocks.DEEPSLATE_TITANIUM_ORE)
-                .add(TitaniumBlocks.END_TITANIUM_ORE)
-                .add(TitaniumBlocks.RAW_TITANIUM_BLOCK)
-                .add(TitaniumBlocks.TITANIUM_BLOCK);
+                .add(TitaniumBlocks.TITANIUM_ORE.get())
+                .add(TitaniumBlocks.DEEPSLATE_TITANIUM_ORE.get())
+                .add(TitaniumBlocks.END_TITANIUM_ORE.get())
+                .add(TitaniumBlocks.RAW_TITANIUM_BLOCK.get())
+                .add(TitaniumBlocks.TITANIUM_BLOCK.get());
                 //.add(TitaniumBlocks.TITANIUM_LANTERN);
 
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
-                .add(TitaniumBlocks.TITANIUM_ORE)
-                .add(TitaniumBlocks.DEEPSLATE_TITANIUM_ORE)
-                .add(TitaniumBlocks.END_TITANIUM_ORE)
-                .add(TitaniumBlocks.RAW_TITANIUM_BLOCK)
-                .add(TitaniumBlocks.TITANIUM_BLOCK);
+                .add(TitaniumBlocks.TITANIUM_ORE.get())
+                .add(TitaniumBlocks.DEEPSLATE_TITANIUM_ORE.get())
+                .add(TitaniumBlocks.END_TITANIUM_ORE.get())
+                .add(TitaniumBlocks.RAW_TITANIUM_BLOCK.get())
+                .add(TitaniumBlocks.TITANIUM_BLOCK.get());
     }
 }

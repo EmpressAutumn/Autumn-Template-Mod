@@ -5,6 +5,7 @@ import com.atom596.titanium.item.TitaniumArmorMaterial;
 import com.atom596.titanium.item.TitaniumItemGroup;
 import com.atom596.titanium.item.TitaniumItems;
 import com.atom596.titanium.item.TitaniumPotions;
+import com.atom596.titanium.sound.TitaniumSounds;
 import org.slf4j.LoggerFactory;
 
 public class Titanium {
@@ -13,6 +14,7 @@ public class Titanium {
 
 	public static void initialize() {
 		TitaniumArmorMaterial.init();
+		TitaniumSounds.init();
 		TitaniumPotions.init();
 		TitaniumBlocks.init();
 		TitaniumItems.init();
