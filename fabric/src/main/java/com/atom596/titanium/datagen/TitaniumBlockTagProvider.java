@@ -1,14 +1,10 @@
 package com.atom596.titanium.datagen;
 
-import com.atom596.titanium.Titanium;
 import com.atom596.titanium.block.TitaniumBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider.BlockTagProvider;
-import net.minecraft.commands.arguments.ResourceKeyArgument;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.tags.TagKey;
 
 import java.util.concurrent.CompletableFuture;
 

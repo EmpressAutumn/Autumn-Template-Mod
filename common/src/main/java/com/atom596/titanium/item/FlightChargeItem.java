@@ -17,8 +17,8 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 
 public class FlightChargeItem extends Item implements ProjectileItem {
-    public FlightChargeItem(Item.Properties properties) {
-        super(properties);
+    public FlightChargeItem() {
+        super(new Item.Properties());
     }
 
     @Override

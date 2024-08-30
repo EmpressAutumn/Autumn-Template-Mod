@@ -31,7 +31,7 @@ public class TitaniumModelProvider extends FabricModelProvider {
         itemModelGenerator.generateFlatItem(TitaniumItems.RAW_TITANIUM, ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(TitaniumItems.TITANIUM_NUGGET, ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(TitaniumItems.TITANIUM_INGOT, ModelTemplates.FLAT_ITEM);
-        itemModelGenerator.generateFlatItem(TitaniumItems.MUSIC_DISC_AMETHYST, ModelTemplates.FLAT_ITEM);
+        //itemModelGenerator.generateFlatItem(TitaniumItems.MUSIC_DISC_AMETHYST, ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(TitaniumItems.TITANIUM_HORSE_ARMOR, ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(TitaniumItems.END_POWDER, ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(TitaniumItems.FLIGHT_CHARGE, ModelTemplates.FLAT_ITEM);

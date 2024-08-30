@@ -4,10 +4,10 @@
   "package": "com.atom596.titanium.mixin",
   "refmap": "${mod_id}.refmap.json",
   "compatibilityLevel": "JAVA_21",
-  "mixins": [],
-  "client": [
-    "GeodeBarrelMixin"
+  "mixins": [
+    "PotionRecipeMixin"
   ],
+  "client": [],
   "server": [],
   "injectors": {
     "defaultRequire": 1

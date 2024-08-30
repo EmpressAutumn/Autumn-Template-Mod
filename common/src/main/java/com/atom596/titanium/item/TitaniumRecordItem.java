@@ -1,9 +1,6 @@
 package com.atom596.titanium.item;
 
 //import com.atom596.titanium.sound.TitaniumSounds;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Rarity;
-import net.minecraft.world.item.RecordItem;
 
 public class TitaniumRecordItem /*extends RecordItem*/ {
     /*protected TitaniumRecordItem() {

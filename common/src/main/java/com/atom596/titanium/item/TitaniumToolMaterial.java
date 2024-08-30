@@ -37,6 +37,6 @@ public class TitaniumToolMaterial implements Tier {
 
     @Override
     public Ingredient getRepairIngredient() {
-        return Ingredient.of(TitaniumItems.TITANIUM_INGOT);
+        return Ingredient.of(TitaniumItems.TITANIUM_INGOT.get());
     }
 }
