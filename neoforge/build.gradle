@@ -19,6 +19,11 @@ runs {
         systemProperty "neoforge.enabledGameTestNamespaces", "${mod_id}"
         programArgument "--nogui"
     }
+    data {
+        programArguments.addAll "--mod", project.mod_id, "--all", "--output",
+                project(":common").file("src/main/generated/").getAbsolutePath(), "--existing",
+                project(":common").file("src/main/resources/").getAbsolutePath()
+    }
 }
 sourceSets.main.resources {
     srcDir(project(":common").file("src/main/generated"))

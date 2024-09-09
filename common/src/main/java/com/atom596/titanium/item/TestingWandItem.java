@@ -23,6 +23,7 @@ public class TestingWandItem extends Item {
         blocks.add("Block{minecraft:diamond_ore}");
         blocks.add("Block{minecraft:deepslate_diamond_ore}");
     }
+
     public List<String> blocks = new ArrayList<>();
 
     @Override
@@ -39,13 +40,18 @@ public class TestingWandItem extends Item {
                 for (int x = user.getBlockX(); x < user.getBlockX() + 16; x++) {
                     for (int y = level.getMaxBuildHeight() - 1; y >= level.getMinBuildHeight(); y--) {
                         for (int z = user.getBlockZ(); z < user.getBlockZ() + 16; z++) {
-                            if (!blocks.contains(level.getBlockState(new BlockPos(x, y, z)).getBlock().toString())) {
+                            String block = level.getBlockState(new BlockPos(x, y, z)).getBlock().toString();
+                            if (!blocks.contains(block)) {
                                 level.setBlock(new BlockPos(x, y, z), Blocks.AIR.defaultBlockState(), 255);
+                            }
+                            else {
+                                count.set(blocks.indexOf(block),
+                                        count.get(blocks.indexOf(block)) + 1);
                             }
                         }
                     }
                 }
-                user.sendSystemMessage(Component.literal("Summary of Deleted Blocks:"));
+                user.sendSystemMessage(Component.literal("Summary of Blocks:"));
                 for (int i = 0; i < blocks.size(); i++) {
                     user.sendSystemMessage(Component.literal(count.get(i) + " blocks of " + blocks.get(i) + "."));
                 }

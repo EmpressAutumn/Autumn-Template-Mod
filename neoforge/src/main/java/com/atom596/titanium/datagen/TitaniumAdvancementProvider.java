@@ -2,26 +2,30 @@ package com.atom596.titanium.datagen;
 
 import com.atom596.titanium.Titanium;
 import com.atom596.titanium.item.TitaniumItems;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.fabricmc.fabric.api.datagen.v1.provider.FabricAdvancementProvider;
 import net.minecraft.advancements.Advancement;
 import net.minecraft.advancements.AdvancementHolder;
 import net.minecraft.advancements.AdvancementType;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.data.PackOutput;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
+import net.neoforged.neoforge.common.data.AdvancementProvider;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
+import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
 
-public class TitaniumAdvancementProvider extends FabricAdvancementProvider {
-    public TitaniumAdvancementProvider(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> registryLookup) {
-        super(output, registryLookup);
+public class TitaniumAdvancementProvider extends AdvancementProvider {
+
+    private static final List<AdvancementGenerator> advancements = null;
+
+    public TitaniumAdvancementProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> completableFuture, ExistingFileHelper exFileHelper) {
+        super(output, completableFuture, exFileHelper, advancements);
     }
 
-    @Override
-    public void generateAdvancement(HolderLookup.Provider registryLookup, Consumer<AdvancementHolder> consumer) {
+    void generate(HolderLookup.Provider completableFuture, Consumer<AdvancementHolder> consumer, ExistingFileHelper exFileHelper) {
         AdvancementHolder getTitaniumAdvancement = new Advancement.Builder()
                 .display(
                         TitaniumItems.TITANIUM_INGOT.get(),
@@ -35,7 +39,7 @@ public class TitaniumAdvancementProvider extends FabricAdvancementProvider {
                 )
                 .parent(new AdvancementHolder(new ResourceLocation("minecraft", "story/iron_tools"), null))
                 .addCriterion("got_titanium", InventoryChangeTrigger.TriggerInstance.hasItems(TitaniumItems.TITANIUM_INGOT.get()))
-                .build(new ResourceLocation(Titanium.MOD_ID, "get_titanium"));
+                .save(consumer, new ResourceLocation(Titanium.MOD_ID, "get_titanium"), exFileHelper);
 
         AdvancementHolder titaniumToolsAdvancement = new Advancement.Builder()
                 .display(
@@ -55,7 +59,7 @@ public class TitaniumAdvancementProvider extends FabricAdvancementProvider {
                         TitaniumItems.TITANIUM_AXE.get(),
                         TitaniumItems.TITANIUM_HOE.get()
                 ))
-                .build(new ResourceLocation(Titanium.MOD_ID, "/titanium_tools"));
+                .save(consumer, new ResourceLocation(Titanium.MOD_ID, "/titanium_tools"), exFileHelper);
 
         AdvancementHolder titaniumArmorAdvancement = new Advancement.Builder()
                 .display(
@@ -75,6 +79,6 @@ public class TitaniumAdvancementProvider extends FabricAdvancementProvider {
                         TitaniumItems.TITANIUM_LEGGINGS.get(),
                         TitaniumItems.TITANIUM_BOOTS.get()
                 ))
-                .build(new ResourceLocation(Titanium.MOD_ID, "/titanium_armor"));
+                .save(consumer, new ResourceLocation(Titanium.MOD_ID, "/titanium_armor"), exFileHelper);
     }
 }

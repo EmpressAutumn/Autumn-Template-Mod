@@ -16,7 +16,7 @@ public class TitaniumBlocks {
     public static final RegistryObject<Block, Block> END_TITANIUM_ORE = BLOCKS.register("end_titanium_ore", () -> new Block(Properties.of().strength(4.0F).sound(SoundType.STONE).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block, Block> RAW_TITANIUM_BLOCK = BLOCKS.register("raw_titanium_block", () -> new Block(Properties.of().strength(4.0F).sound(SoundType.STONE).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block, Block> TITANIUM_BLOCK = BLOCKS.register("titanium_block", () -> new Block(Properties.of().strength(4.0F).sound(SoundType.METAL).requiresCorrectToolForDrops()));
-    //public static final RegistryObject<Block, TitaniumLanternBlock> TITANIUM_LANTERN = BLOCKS.register("titanium_lantern", () -> new TitaniumLanternBlock());
+    public static final RegistryObject<Block, TitaniumLanternBlock> TITANIUM_LANTERN = BLOCKS.register("titanium_lantern", TitaniumLanternBlock::new);
 
     public static void init() {}
 }

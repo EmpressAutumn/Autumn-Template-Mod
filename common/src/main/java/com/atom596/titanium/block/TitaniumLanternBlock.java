@@ -1,6 +1,21 @@
 package com.atom596.titanium.block;
 
-public class TitaniumLanternBlock /*extends LanternBlock*/ {/*
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.LanternBlock;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.material.PushReaction;
+import net.minecraft.world.phys.BlockHitResult;
+
+public class TitaniumLanternBlock extends LanternBlock {
     public TitaniumLanternBlock() {
         super(Properties.of()
                 .forceSolidOn()
@@ -36,4 +51,4 @@ public class TitaniumLanternBlock /*extends LanternBlock*/ {/*
         super.createBlockStateDefinition(builder);
         builder.add(LIT);
     }
-*/}
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "titanium:titanium_lantern"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "titanium_lantern": {
+      "conditions": {
+        "items": [
+          {
+            "items": "titanium:titanium_nugget"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "titanium_lantern"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "titanium:titanium_lantern"
+    ]
+  }
+}

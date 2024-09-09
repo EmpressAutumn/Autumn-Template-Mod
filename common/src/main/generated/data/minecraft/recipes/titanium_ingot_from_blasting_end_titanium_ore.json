@@ -1,13 +1,14 @@
 {
-  "type": "minecraft:smelting",
+  "type": "minecraft:blasting",
   "category": "misc",
-  "cookingtime": 200,
+  "cookingtime": 100,
   "experience": 0.1,
   "group": "titanium",
   "ingredient": {
-    "item": "titanium:titanium_ore"
+    "item": "titanium:end_titanium_ore"
   },
   "result": {
+    "count": 1,
     "id": "titanium:titanium_ingot"
   }
 }

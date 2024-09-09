@@ -17,9 +17,6 @@
     "entrypoints": {
         "main": [
             "com.atom596.titanium.TitaniumFabric"
-        ],
-        "fabric-datagen": [
-            "com.atom596.titanium.TitaniumDataGenerator"
         ]
     },
     "mixins": [
