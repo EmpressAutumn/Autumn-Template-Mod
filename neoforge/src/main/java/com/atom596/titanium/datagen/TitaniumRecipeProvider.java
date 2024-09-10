@@ -147,12 +147,6 @@ public class TitaniumRecipeProvider extends RecipeProvider {
                 .unlockedBy(getItemName(TitaniumItems.TITANIUM_LANTERN.get()), has(TitaniumItems.TITANIUM_NUGGET.get()))
                 .save(recipeOutput, new ResourceLocation(Titanium.MOD_ID, getItemName(TitaniumItems.TITANIUM_LANTERN.get())));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, TitaniumItems.END_POWDER.get(), 2)
-                .pattern("T")
-                .define('T', Items.ENDER_PEARL)
-                .unlockedBy(getItemName(TitaniumItems.END_POWDER.get()), has(Items.ENDER_PEARL))
-                .save(recipeOutput, new ResourceLocation(Titanium.MOD_ID, getItemName(TitaniumItems.END_POWDER.get())));
-
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, TitaniumItems.FLIGHT_CHARGE.get(), 1)
                 .pattern("TTT")
                 .pattern("TST")
