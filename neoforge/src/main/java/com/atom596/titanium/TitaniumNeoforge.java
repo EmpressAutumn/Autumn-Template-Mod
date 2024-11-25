@@ -1,14 +1,13 @@
 package com.atom596.titanium;
 
 import com.atom596.titanium.item.TitaniumItems;
-import net.minecraft.world.item.CreativeModeTab;
+import it.unimi.dsi.fastutil.objects.ObjectSortedSet;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
-import net.neoforged.neoforge.common.util.MutableHashedLinkedMap;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 
 import java.util.function.Supplier;
@@ -22,7 +21,7 @@ public class TitaniumNeoforge {
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        MutableHashedLinkedMap<ItemStack, CreativeModeTab.TabVisibility> entries = event.getEntries();
+        ObjectSortedSet<ItemStack> entries = event.getSearchEntries();
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             putAfter(entries, Items.LIGHT_WEIGHTED_PRESSURE_PLATE, TitaniumItems.TITANIUM_BLOCK);
             event.accept(TitaniumItems.TITANIUM_BLOCK.get()); // After Light Weighted Pressure Plate
@@ -65,9 +64,14 @@ public class TitaniumNeoforge {
         }
     }
 
-    private static void putAfter(MutableHashedLinkedMap<ItemStack, CreativeModeTab.TabVisibility> entries, ItemLike after, Supplier<? extends ItemLike> supplier) {
+    private static void putAfter(ObjectSortedSet<ItemStack> entries, ItemLike after, Supplier<? extends ItemLike> supplier) {
         ItemLike key = supplier.get();
         if (!entries.contains(new ItemStack(after))) return;
-        entries.putAfter(new ItemStack(after), new ItemStack(key), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+        ObjectSortedSet<ItemStack> head = entries.headSet(new ItemStack(after));
+        ObjectSortedSet<ItemStack> tail = entries.tailSet(new ItemStack(after));
+        head.add(new ItemStack(key));
+        tail.remove(new ItemStack(after));
+        head.addAll(tail);
+        entries = head;
     }
 }

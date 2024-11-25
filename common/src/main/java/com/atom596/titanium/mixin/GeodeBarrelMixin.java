@@ -35,6 +35,6 @@ public class GeodeBarrelMixin {
 
 		structureWorldAccess.setBlock(barrelPos, Blocks.BARREL.defaultBlockState(), Block.UPDATE_CLIENTS);
 		RandomizableContainer.setBlockEntityLootTable(structureWorldAccess, random, barrelPos,
-				ResourceKey.create(Registries.LOOT_TABLE, new ResourceLocation(Titanium.MOD_ID, "chests/amethyst_barrel")));
+				ResourceKey.create(Registries.LOOT_TABLE, ResourceLocation.fromNamespaceAndPath(Titanium.MOD_ID, "chests/amethyst_barrel")));
 	}
 }

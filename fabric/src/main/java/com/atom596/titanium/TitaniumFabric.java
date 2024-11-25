@@ -38,7 +38,7 @@ public class TitaniumFabric implements ModInitializer {
             content.addAfter(TitaniumItems.TITANIUM_SHOVEL.get(), TitaniumItems.TITANIUM_PICKAXE.get());
             content.addAfter(TitaniumItems.TITANIUM_PICKAXE.get(), TitaniumItems.TITANIUM_AXE.get());
             content.addAfter(TitaniumItems.TITANIUM_AXE.get(), TitaniumItems.TITANIUM_HOE.get());
-            content.addAfter(Items.FIRE_CHARGE, TitaniumItems.FLIGHT_CHARGE.get());
+            content.addAfter(Items.WIND_CHARGE, TitaniumItems.FLIGHT_CHARGE.get());
             content.addAfter(Items.MUSIC_DISC_PIGSTEP, TitaniumItems.MUSIC_DISC_AMETHYST.get());
         });
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.COMBAT).register(content -> {
@@ -54,7 +54,7 @@ public class TitaniumFabric implements ModInitializer {
             content.addAfter(Items.RAW_GOLD, TitaniumItems.RAW_TITANIUM.get());
             content.addAfter(Items.GOLD_NUGGET, TitaniumItems.TITANIUM_NUGGET.get());
             content.addAfter(Items.GOLD_INGOT, TitaniumItems.TITANIUM_INGOT.get());
-            content.addAfter(Items.FIRE_CHARGE, TitaniumItems.FLIGHT_CHARGE.get());
+            content.addAfter(Items.WIND_CHARGE, TitaniumItems.FLIGHT_CHARGE.get());
             content.addAfter(Items.BLAZE_POWDER, TitaniumItems.END_POWDER.get());
         });
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.OP_BLOCKS).register(content -> {

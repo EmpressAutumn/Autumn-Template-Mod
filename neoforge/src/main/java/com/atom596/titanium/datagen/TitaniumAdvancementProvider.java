@@ -37,9 +37,9 @@ public class TitaniumAdvancementProvider extends AdvancementProvider {
                         true,
                         false
                 )
-                .parent(new AdvancementHolder(new ResourceLocation("minecraft", "story/iron_tools"), null))
+                .parent(new AdvancementHolder(ResourceLocation.fromNamespaceAndPath("minecraft", "story/iron_tools"), null))
                 .addCriterion("got_titanium", InventoryChangeTrigger.TriggerInstance.hasItems(TitaniumItems.TITANIUM_INGOT.get()))
-                .save(consumer, new ResourceLocation(Titanium.MOD_ID, "get_titanium"), exFileHelper);
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(Titanium.MOD_ID, "get_titanium"), exFileHelper);
 
         AdvancementHolder titaniumToolsAdvancement = new Advancement.Builder()
                 .display(
@@ -59,7 +59,7 @@ public class TitaniumAdvancementProvider extends AdvancementProvider {
                         TitaniumItems.TITANIUM_AXE.get(),
                         TitaniumItems.TITANIUM_HOE.get()
                 ))
-                .save(consumer, new ResourceLocation(Titanium.MOD_ID, "/titanium_tools"), exFileHelper);
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(Titanium.MOD_ID, "/titanium_tools"), exFileHelper);
 
         AdvancementHolder titaniumArmorAdvancement = new Advancement.Builder()
                 .display(
@@ -79,6 +79,6 @@ public class TitaniumAdvancementProvider extends AdvancementProvider {
                         TitaniumItems.TITANIUM_LEGGINGS.get(),
                         TitaniumItems.TITANIUM_BOOTS.get()
                 ))
-                .save(consumer, new ResourceLocation(Titanium.MOD_ID, "/titanium_armor"), exFileHelper);
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(Titanium.MOD_ID, "/titanium_armor"), exFileHelper);
     }
 }

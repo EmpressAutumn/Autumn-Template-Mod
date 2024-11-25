@@ -1,8 +1,6 @@
-import net.neoforged.gradle.dsl.common.runs.run.Run
-
 plugins {
     id "multiloader-loader"
-    id "net.neoforged.gradle.userdev" version "7.0.107"
+    id "net.neoforged.gradle.userdev" version "7.0.171"
 }
 def at = file("src/main/resources/META-INF/accesstransformer.cfg")
 if (at.exists()) {

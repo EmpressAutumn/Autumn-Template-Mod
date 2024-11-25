@@ -5,6 +5,9 @@ import com.atom596.titanium.block.TitaniumBlocks;
 import com.atom596.titanium.regutils.RegistrationProvider;
 import com.atom596.titanium.regutils.RegistryObject;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
 
 public class TitaniumItems {
@@ -35,7 +38,7 @@ public class TitaniumItems {
     public static final RegistryObject<Item, Item> TITANIUM_INGOT = ITEMS.register("titanium_ingot",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item, Item> MUSIC_DISC_AMETHYST = ITEMS.register("music_disc_amethyst",
-            TitaniumRecordItem::new);
+            () -> new Item(new Item.Properties().stacksTo(1).rarity(Rarity.RARE).jukeboxPlayable(ResourceKey.create(Registries.JUKEBOX_SONG, ResourceLocation.fromNamespaceAndPath(Titanium.MOD_ID, "amethyst")))));
     public static final RegistryObject<Item, Item> TITANIUM_HORSE_ARMOR = ITEMS.register("titanium_horse_armor",
             () -> new AnimalArmorItem(TitaniumArmorMaterial.INSTANCE.asHolder(), AnimalArmorItem.BodyType.EQUESTRIAN, false, new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item, Item> END_POWDER = ITEMS.register("end_powder",

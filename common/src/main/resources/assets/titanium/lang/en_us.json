@@ -12,7 +12,6 @@
     "item.titanium.titanium_nugget": "Titanium Nugget",
     "item.titanium.titanium_ingot": "Titanium Ingot",
     "item.titanium.music_disc_amethyst": "Music Disc",
-    "item.titanium.music_disc_amethyst.desc": "DestoLynx - Amethyst",
     "item.titanium.titanium_horse_armor": "Titanium Horse Armor",
     "item.titanium.end_powder": "End Powder",
     "item.titanium.flight_charge": "Flight Charge",
@@ -26,6 +25,8 @@
     "block.titanium.titanium_lantern": "Titanium Lantern",
 
     "itemGroup.titanium.titanium_group": "Titanium",
+
+    "jukebox_song.titanium.amethyst": "DestoLynx - Amethyst",
 
     "advancements.titanium.get_titanium.title": "Harder Than Steel",
     "advancements.titanium.get_titanium.description": "Smelt a Titanium Ingot",

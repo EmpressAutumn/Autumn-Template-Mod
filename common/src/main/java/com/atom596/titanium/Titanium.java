@@ -5,16 +5,15 @@ import com.atom596.titanium.item.TitaniumArmorMaterial;
 import com.atom596.titanium.item.TitaniumItemGroup;
 import com.atom596.titanium.item.TitaniumItems;
 import com.atom596.titanium.item.TitaniumPotions;
-import com.atom596.titanium.sound.TitaniumSounds;
 import org.slf4j.LoggerFactory;
 
 public class Titanium {
 	public static final String MOD_ID = "titanium";
-	public static final org.slf4j.Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+	public static final String MOD_NAME = "Titanium";
+	public static final org.slf4j.Logger LOGGER = LoggerFactory.getLogger(MOD_NAME);
 
 	public static void initialize() {
 		TitaniumArmorMaterial.init();
-		TitaniumSounds.init();
 		TitaniumPotions.init();
 		TitaniumBlocks.init();
 		TitaniumItems.init();

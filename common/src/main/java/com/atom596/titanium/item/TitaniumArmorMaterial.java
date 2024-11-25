@@ -3,8 +3,6 @@ package com.atom596.titanium.item;
 import com.atom596.titanium.Titanium;
 import com.atom596.titanium.regutils.RegistrationProvider;
 import com.atom596.titanium.regutils.RegistryObject;
-import net.minecraft.core.Holder;
-import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
@@ -28,7 +26,7 @@ public class TitaniumArmorMaterial {
                     15,
                     SoundEvents.ARMOR_EQUIP_IRON,
                     () -> Ingredient.of(TitaniumItems.TITANIUM_INGOT.get()),
-                    List.of(new ArmorMaterial.Layer(new ResourceLocation(Titanium.MOD_ID, "titanium"))),
+                    List.of(new ArmorMaterial.Layer(ResourceLocation.fromNamespaceAndPath(Titanium.MOD_ID, "titanium"))),
                     1.0f,
                     0.0f
             )

@@ -21,7 +21,7 @@ public class TitaniumBlockTagProvider extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
-        this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation(Titanium.MOD_ID, "titanium_ores"))).add(
+        this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(Titanium.MOD_ID, "titanium_ores"))).add(
                 TitaniumBlocks.TITANIUM_ORE.get(),
                 TitaniumBlocks.TITANIUM_BLOCK.get(),
                 TitaniumBlocks.END_TITANIUM_ORE.get()
