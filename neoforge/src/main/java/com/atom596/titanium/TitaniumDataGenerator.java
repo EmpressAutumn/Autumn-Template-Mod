@@ -22,13 +22,15 @@ public class TitaniumDataGenerator {
         CompletableFuture<HolderLookup.Provider> completableFuture = event.getLookupProvider();
         BlockTagsProvider blockTagsProvider = new TitaniumBlockTagProvider(output, completableFuture, exFileHelper);
 
-        generator.addProvider(true, new TitaniumAdvancementProvider(output, completableFuture, exFileHelper));
+        //generator.addProvider(true, new TitaniumAdvancementProvider(output, completableFuture, exFileHelper));
         generator.addProvider(true, new TitaniumBlockStateProvider(output, exFileHelper));
         generator.addProvider(true, new TitaniumBlockTagProvider(output, completableFuture, exFileHelper));
         generator.addProvider(true, new TitaniumItemModelProvider(output, exFileHelper));
-        generator.addProvider(true, new TitaniumItemTagProvider(output, completableFuture, blockTagsProvider.contentsGetter(), exFileHelper));
+        //generator.addProvider(true, new TitaniumItemTagProvider(output, completableFuture, blockTagsProvider.contentsGetter(), exFileHelper));
         generator.addProvider(true, new TitaniumLootTableProvider(output, completableFuture));
         generator.addProvider(true, new TitaniumRecipeProvider(output, completableFuture));
         generator.addProvider(true, new TitaniumWorldGenProvider(output, completableFuture));
+
+        // Not working: TitaniumAdvancementProvider, TitaniumItemTagProvider, TitaniumLootTableProvider
     }
 }

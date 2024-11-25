@@ -2,6 +2,7 @@ package com.atom596.titanium.datagen;
 
 import com.atom596.titanium.Titanium;
 import com.atom596.titanium.datagen.loottables.TitaniumBlockLootTables;
+import com.atom596.titanium.datagen.loottables.TitaniumChestLootTables;
 import com.google.common.collect.Sets;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.WritableRegistry;
@@ -21,7 +22,8 @@ import java.util.stream.Collectors;
 public class TitaniumLootTableProvider extends LootTableProvider {
     public TitaniumLootTableProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> completableFuture) {
         super(output, Set.of(), List.of(
-                new SubProviderEntry(TitaniumBlockLootTables::new, LootContextParamSets.BLOCK)
+                //new SubProviderEntry(TitaniumBlockLootTables::new, LootContextParamSets.BLOCK)
+                //new SubProviderEntry(TitaniumChestLootTables::new, LootContextParamSets.CHEST)
         ), completableFuture);
     }
 

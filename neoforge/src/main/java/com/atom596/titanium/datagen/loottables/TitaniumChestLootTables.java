@@ -2,11 +2,11 @@ package com.atom596.titanium.datagen.loottables;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.loot.EntityLootSubProvider;
-import net.minecraft.world.flag.FeatureFlagSet;
+import net.minecraft.world.flag.FeatureFlags;
 
 public class TitaniumChestLootTables extends EntityLootSubProvider {
-    protected TitaniumChestLootTables(FeatureFlagSet p_266989_, HolderLookup.Provider p_345284_) {
-        super(p_266989_, p_345284_);
+    public TitaniumChestLootTables(HolderLookup.Provider registries) {
+        super(FeatureFlags.REGISTRY.allFlags(), registries);
     }
 
     @Override

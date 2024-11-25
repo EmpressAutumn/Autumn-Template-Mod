@@ -16,11 +16,11 @@ import java.util.function.Supplier;
 public class TitaniumNeoforge {
     public TitaniumNeoforge(IEventBus eventBus) {
         Titanium.initialize();
-        eventBus.addListener(this::addCreative);
+        //eventBus.addListener(this::addCreative);
         Titanium.LOGGER.info("Initialized Titanium by EmpressAutumn");
     }
 
-    private void addCreative(BuildCreativeModeTabContentsEvent event) {
+    /*private void addCreative(BuildCreativeModeTabContentsEvent event) {
         ObjectSortedSet<ItemStack> entries = event.getSearchEntries();
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             putAfter(entries, Items.LIGHT_WEIGHTED_PRESSURE_PLATE, TitaniumItems.TITANIUM_BLOCK);
@@ -73,5 +73,5 @@ public class TitaniumNeoforge {
         tail.remove(new ItemStack(after));
         head.addAll(tail);
         entries = head;
-    }
+    }*/
 }
