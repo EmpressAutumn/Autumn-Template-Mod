@@ -1,6 +1,9 @@
 {
     "comparator_output": 14,
-    "description": "jukebox_song.titanium.amethyst",
+    "description": {
+        "type": "translatable",
+        "translate": "jukebox_song.titanium.amethyst"
+    },
     "length_in_seconds": 144.692,
     "sound_event": {
         "sound_id": "titanium:music_disc.amethyst",
