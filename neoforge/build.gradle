@@ -1,0 +1,32 @@
+plugins {
+    id "multiloader-loader"
+    id "net.neoforged.gradle.userdev" version "7.0.171"
+}
+def at = file("src/main/resources/META-INF/accesstransformer.cfg")
+if (at.exists()) {
+    minecraft.accessTransformers.file at
+}
+runs {
+    configureEach {
+        modSource project.sourceSets.main
+    }
+    client {
+        systemProperty "neoforge.enabledGameTestNamespaces", "${mod_id}"
+    }
+    server {
+        systemProperty "neoforge.enabledGameTestNamespaces", "${mod_id}"
+        programArgument "--nogui"
+    }
+    data {
+        programArguments.addAll "--mod", project.mod_id, "--all", "--output",
+                project(":common").file("src/main/generated/").getAbsolutePath(), "--existing",
+                project(":common").file("src/main/resources/").getAbsolutePath()
+    }
+}
+sourceSets.main.resources {
+    srcDir(project(":common").file("src/main/generated"))
+    exclude("**/.cache")
+}
+dependencies {
+    implementation "net.neoforged:neoforge:${neoforge_version}"
+}

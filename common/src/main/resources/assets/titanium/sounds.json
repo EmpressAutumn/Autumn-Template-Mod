@@ -1,0 +1,9 @@
+{
+  "music_disc.amethyst": {
+    "sounds": [
+      {
+        "name": "titanium:records/amethyst"
+      }
+    ]
+  }
+}
