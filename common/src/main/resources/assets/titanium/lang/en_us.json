@@ -33,5 +33,7 @@
     "advancements.titanium.titanium_tools.title": "A Temporary Improvement",
     "advancements.titanium.titanium_tools.description": "Construct a more durable set of tools",
     "advancements.titanium.titanium_armor.title": "An Optional Upgrade",
-    "advancements.titanium.titanium_armor.description": "Harness the strength of a complete suit of titanium"
+    "advancements.titanium.titanium_armor.description": "Harness the strength of a complete suit of titanium",
+
+    "tag.block.titanium_ores": "Titanium Ores"
 }

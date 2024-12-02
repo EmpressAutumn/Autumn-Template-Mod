@@ -3,6 +3,7 @@ package com.atom596.titanium;
 import com.atom596.titanium.datagen.*;
 import com.atom596.titanium.datagen.loottables.TitaniumBlockLootTables;
 import com.atom596.titanium.datagen.loottables.TitaniumChestLootTables;
+import com.atom596.titanium.datagen.loottables.TitaniumMobLootTables;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -38,7 +39,8 @@ public class TitaniumDataGenerator {
         generator.addProvider(true, new TitaniumItemTagProvider(output, completableFuture, blockTagsProvider.contentsGetter(), exFileHelper));
         generator.addProvider(true, new LootTableProvider(output, Collections.emptySet(), List.of(
                 new LootTableProvider.SubProviderEntry(TitaniumBlockLootTables::new, LootContextParamSets.BLOCK),
-                new LootTableProvider.SubProviderEntry(TitaniumChestLootTables::new, LootContextParamSets.CHEST)
+                new LootTableProvider.SubProviderEntry(TitaniumChestLootTables::new, LootContextParamSets.CHEST),
+                new LootTableProvider.SubProviderEntry(TitaniumMobLootTables::new, LootContextParamSets.ENTITY)
         ), completableFuture));
         generator.addProvider(true, new TitaniumRecipeProvider(output, completableFuture));
         generator.addProvider(true, new TitaniumWorldGenProvider(output, completableFuture));
