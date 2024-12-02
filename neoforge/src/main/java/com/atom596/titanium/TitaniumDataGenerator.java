@@ -33,17 +33,14 @@ public class TitaniumDataGenerator {
                 new TitaniumAdvancementGenerator()
         )));
         generator.addProvider(true, new TitaniumBlockStateProvider(output, exFileHelper));
-        generator.addProvider(true, new TitaniumBlockTagProvider(output, completableFuture, exFileHelper));
+        generator.addProvider(true, blockTagsProvider);
         generator.addProvider(true, new TitaniumItemModelProvider(output, exFileHelper));
-        //generator.addProvider(true, new TitaniumItemTagProvider(output, completableFuture, blockTagsProvider.contentsGetter(), exFileHelper));
+        generator.addProvider(true, new TitaniumItemTagProvider(output, completableFuture, blockTagsProvider.contentsGetter(), exFileHelper));
         generator.addProvider(true, new LootTableProvider(output, Collections.emptySet(), List.of(
                 new LootTableProvider.SubProviderEntry(TitaniumBlockLootTables::new, LootContextParamSets.BLOCK),
                 new LootTableProvider.SubProviderEntry(TitaniumChestLootTables::new, LootContextParamSets.CHEST)
         ), completableFuture));
         generator.addProvider(true, new TitaniumRecipeProvider(output, completableFuture));
         generator.addProvider(true, new TitaniumWorldGenProvider(output, completableFuture));
-
-        // Not working: TitaniumItemTagProvider
-        // Loot Tables are not finished
     }
 }

@@ -15,7 +15,6 @@ import org.jetbrains.annotations.Nullable;
 import java.util.concurrent.CompletableFuture;
 
 public class TitaniumItemTagProvider extends ItemTagsProvider {
-
     public TitaniumItemTagProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, CompletableFuture<TagLookup<Block>> completableFuture, @Nullable ExistingFileHelper exFileHelper) {
         super(output, lookupProvider, completableFuture, Titanium.MOD_ID, exFileHelper);
     }
