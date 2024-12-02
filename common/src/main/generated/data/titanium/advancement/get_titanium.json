@@ -1,0 +1,33 @@
+{
+  "parent": "minecraft:story/iron_tools",
+  "criteria": {
+    "got_titanium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "titanium:titanium_ingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.titanium.get_titanium.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "titanium:titanium_ingot"
+    },
+    "title": {
+      "translate": "advancements.titanium.get_titanium.title"
+    }
+  },
+  "requirements": [
+    [
+      "got_titanium"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

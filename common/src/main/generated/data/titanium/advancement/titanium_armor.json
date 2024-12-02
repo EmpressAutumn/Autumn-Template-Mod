@@ -1,0 +1,42 @@
+{
+  "parent": "titanium:get_titanium",
+  "criteria": {
+    "get_titanium_armor": {
+      "conditions": {
+        "items": [
+          {
+            "items": "titanium:titanium_helmet"
+          },
+          {
+            "items": "titanium:titanium_chestplate"
+          },
+          {
+            "items": "titanium:titanium_leggings"
+          },
+          {
+            "items": "titanium:titanium_boots"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.titanium.titanium_armor.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "titanium:titanium_chestplate"
+    },
+    "title": {
+      "translate": "advancements.titanium.titanium_armor.title"
+    }
+  },
+  "requirements": [
+    [
+      "get_titanium_armor"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

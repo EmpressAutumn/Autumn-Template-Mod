@@ -1,54 +1,65 @@
 package com.atom596.titanium.datagen.loottables;
 
+import com.atom596.titanium.Titanium;
+import com.atom596.titanium.block.TitaniumBlocks;
+import com.atom596.titanium.item.TitaniumItems;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.data.loot.EntityLootSubProvider;
-import net.minecraft.world.flag.FeatureFlags;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.data.loot.LootTableSubProvider;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.storage.loot.LootPool;
+import net.minecraft.world.level.storage.loot.LootTable;
+import net.minecraft.world.level.storage.loot.entries.LootItem;
+import net.minecraft.world.level.storage.loot.functions.EnchantRandomlyFunction;
+import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
+import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
+import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 
-public class TitaniumChestLootTables extends EntityLootSubProvider {
-    public TitaniumChestLootTables(HolderLookup.Provider registries) {
-        super(FeatureFlags.REGISTRY.allFlags(), registries);
-    }
+import java.util.function.BiConsumer;
+
+public class TitaniumChestLootTables implements LootTableSubProvider {
+    public TitaniumChestLootTables(HolderLookup.Provider registries) {}
 
     @Override
-    public void generate() {
-
-    }
-/*
-    @Override
-    public void generate(HolderLookup.Provider registryLookup, BiConsumer<ResourceKey<LootTable>, LootTable.Builder> consumer) {
-        consumer.accept(ResourceKey.create(Registries.LOOT_TABLE, new ResourceLocation(Titanium.MOD_ID, "chests/amethyst_barrel")), new LootTable.Builder()
-                .withPool(new LootPool.Builder().setRolls(LootNumberProviderType.CONSTANT).rolls(ConstantLootNumberProvider.create(1.0f))
-                        .with(ItemEntry.builder(TitaniumItems.MUSIC_DISC_AMETHYST)
-                                .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0f)))
+    public void generate(BiConsumer<ResourceKey<LootTable>, LootTable.Builder> consumer) {
+        consumer.accept(ResourceKey.create(Registries.LOOT_TABLE, ResourceLocation.fromNamespaceAndPath(Titanium.MOD_ID, "chests/amethyst_barrel")), LootTable.lootTable()
+                .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1))
+                        .add(LootItem.lootTableItem(TitaniumItems.MUSIC_DISC_AMETHYST.get())
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1)))
                         )
-                ).pool(LootPool.builder().rolls(UniformLootNumberProvider.create(0.0f, 1.0f))
-                        .with(ItemEntry.builder(TitaniumItems.TITANIUM_PICKAXE)
-                                .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0f)))
-                                .apply(EnchantRandomlyLootFunction.create())
+                ).withPool(LootPool.lootPool().setRolls(UniformGenerator.between(0.0f, 1.0f))
+                        .add(LootItem.lootTableItem(TitaniumItems.TITANIUM_PICKAXE.get())
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1)))
+                                .apply(EnchantRandomlyFunction.randomEnchantment())
                         )
-                ).pool(LootPool.builder().rolls(UniformLootNumberProvider.create(1.0f, 3.0f))
-                        .with(ItemEntry.builder(TitaniumItems.TITANIUM_INGOT)
-                                .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 4.0f)))
-                        ).with(ItemEntry.builder(TitaniumItems.RAW_TITANIUM)
-                                .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(2.0f, 4.0f)))
+                ).withPool(LootPool.lootPool().setRolls(UniformGenerator.between(1.0f, 3.0f))
+                        .add(LootItem.lootTableItem(TitaniumItems.TITANIUM_INGOT.get())
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0f, 4.0f)))
                         )
-                ).pool(LootPool.builder().rolls(UniformLootNumberProvider.create(1.0f, 2.0f))
-                        .with(ItemEntry.builder(TitaniumItems.TITANIUM_NUGGET)
-                                .apply(LootItemFunction.Builder(UniformLootNumberProvider.create(1.0f, 4.0f)))
-                        ).with(ItemEntry.builder(TitaniumItems.RAW_TITANIUM)
-                                .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(2.0f, 4.0f)))
+                        .add(LootItem.lootTableItem(TitaniumItems.RAW_TITANIUM.get())
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(2.0f, 4.0f)))
                         )
-                ).pool(LootPool.builder().rolls(UniformLootNumberProvider.create(1.0f, 2.0f))
-                        .with(ItemEntry.builder(Items.AMETHYST_BLOCK)
-                                .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 2.0f)))
-                        ).with(ItemEntry.builder(Items.AMETHYST_SHARD)
-                                .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 2.0f)))
+                ).withPool(LootPool.lootPool().setRolls(UniformGenerator.between(1.0f, 2.0f))
+                        .add(LootItem.lootTableItem(TitaniumItems.TITANIUM_NUGGET.get())
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0f, 4.0f)))
                         )
-                ).pool(LootPool.builder().rolls(UniformLootNumberProvider.create(1.0f, 2.0f))
-                        .with(ItemEntry.builder(TitaniumBlocks.TITANIUM_LANTERN)
-                                .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0f)))
+                        .add(LootItem.lootTableItem(TitaniumItems.RAW_TITANIUM.get())
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(2.0f, 4.0f)))
+                        )
+                ).withPool(LootPool.lootPool().setRolls(UniformGenerator.between(1.0f, 2.0f))
+                        .add(LootItem.lootTableItem(Items.AMETHYST_BLOCK)
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0f, 2.0f)))
+                        )
+                        .add(LootItem.lootTableItem(Items.AMETHYST_SHARD)
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0f, 2.0f)))
+                        )
+                ).withPool(LootPool.lootPool().setRolls(UniformGenerator.between(1.0f, 2.0f))
+                        .add(LootItem.lootTableItem(TitaniumBlocks.TITANIUM_LANTERN.get())
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1)))
                         )
                 )
         );
-    }*/
+    }
 }

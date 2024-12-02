@@ -54,7 +54,6 @@ public class TitaniumFabric implements ModInitializer {
             content.addAfter(Items.RAW_GOLD, TitaniumItems.RAW_TITANIUM.get());
             content.addAfter(Items.GOLD_NUGGET, TitaniumItems.TITANIUM_NUGGET.get());
             content.addAfter(Items.GOLD_INGOT, TitaniumItems.TITANIUM_INGOT.get());
-            content.addAfter(Items.WIND_CHARGE, TitaniumItems.FLIGHT_CHARGE.get());
             content.addAfter(Items.BLAZE_POWDER, TitaniumItems.END_POWDER.get());
         });
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.OP_BLOCKS).register(content -> {

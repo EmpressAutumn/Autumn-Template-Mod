@@ -1,0 +1,42 @@
+{
+  "parent": "titanium:get_titanium",
+  "criteria": {
+    "get_titanium_tools": {
+      "conditions": {
+        "items": [
+          {
+            "items": "titanium:titanium_pickaxe"
+          },
+          {
+            "items": "titanium:titanium_shovel"
+          },
+          {
+            "items": "titanium:titanium_axe"
+          },
+          {
+            "items": "titanium:titanium_hoe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.titanium.titanium_tools.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "titanium:titanium_pickaxe"
+    },
+    "title": {
+      "translate": "advancements.titanium.titanium_tools.title"
+    }
+  },
+  "requirements": [
+    [
+      "get_titanium_tools"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
