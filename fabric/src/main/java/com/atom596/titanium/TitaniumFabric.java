@@ -1,9 +1,12 @@
 package com.atom596.titanium;
 
+import com.atom596.titanium.block.TitaniumBlocks;
 import com.atom596.titanium.item.TitaniumItems;
 import com.atom596.titanium.world.TitaniumWorldGeneration;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Items;
 
@@ -14,7 +17,7 @@ public class TitaniumFabric implements ModInitializer {
         Titanium.initialize();
 
         TitaniumWorldGeneration.generateModWorldGen();
-
+        BlockRenderLayerMap.INSTANCE.putBlock(TitaniumBlocks.TITANIUM_LANTERN.get(), RenderType.cutout());
         addCreative();
 
         Titanium.LOGGER.info("Initialized Titanium by EmpressAutumn");
