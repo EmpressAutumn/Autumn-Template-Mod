@@ -16,7 +16,7 @@
     "environment": "*",
     "entrypoints": {
         "main": [
-            "com.atom596.titanium.TitaniumFabric"
+            "com.atom596.template.TemplateFabric"
         ]
     },
     "mixins": [
