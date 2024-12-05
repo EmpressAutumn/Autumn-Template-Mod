@@ -9,7 +9,7 @@ java {
     }
 }
 registrationUtils {
-    group "com.atom596.titanium.regutils"
+    group "com.atom596.template.regutils"
     projects {
         common { type "common" }
         fabric { type "fabric" }
