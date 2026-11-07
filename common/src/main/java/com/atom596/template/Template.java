@@ -1,6 +1,6 @@
 package com.atom596.template;
 
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import org.slf4j.LoggerFactory;
 
 public class Template {
@@ -10,7 +10,7 @@ public class Template {
 
 	public static void initialize() {}
 
-	public static ResourceLocation resourceLocation(String id) {
-		return ResourceLocation.fromNamespaceAndPath(MOD_ID, id);
+	public static Identifier resourceLocation(String id) {
+		return Identifier.fromNamespaceAndPath(MOD_ID, id);
 	}
 }
